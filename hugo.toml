@@ -1,4 +1,4 @@
-baseURL = "https://www.cudabu.io"
+baseURL = "/"
 title = "Testing Hugo"
 languageCode = "en-us"
 theme = "poison"
