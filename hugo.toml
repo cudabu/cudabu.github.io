@@ -1,5 +1,5 @@
 baseURL = 'https://www.cudabu.io/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
-theme = 'simple-dark'
+theme = 'poison'
 paginate: 20
