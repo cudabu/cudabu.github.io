@@ -2,18 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Curtis Bunch</title>
-    <link>http://www.cudabu.io/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Curtis Bunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 07 Apr 2024 16:52:12 -0500</lastBuildDate>
-    <atom:link href="http://www.cudabu.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Post</title>
-      <link>http://www.cudabu.io/posts/my-first-post/</link>
+      <link>http://localhost:1313/posts/my-first-post/</link>
       <pubDate>Sun, 07 Apr 2024 16:52:12 -0500</pubDate>
-      <guid>http://www.cudabu.io/posts/my-first-post/</guid>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
       <description>Introduction Link to heading This is bold text, and this is emphasized text.&#xA;Visit the Hugo website!</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/rhcsa_day_1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/rhcsa_day_1/</guid>
+      <description>📚 RHCSA Bootcamp Day 1 Link to heading 🏷️Tags : #04-2024 #lecture ## Other days [RHCSA Bootcamp Day 2](RHCSA Bootcamp Day 2 &amp;ldquo;wikilink&amp;rdquo;) [RHCSA Bootcamp Day 3](RHCSA Bootcamp Day 3 &amp;ldquo;wikilink&amp;rdquo;) [RHCSA Bootcamp Day 4](RHCSA Bootcamp Day 4 &amp;ldquo;wikilink&amp;rdquo;) ## Slides Templates Link to heading moduleName Link to heading Commands Link to heading #commands Output Link to heading #output 📝 Notes Link to heading Getting Started Link to heading Setup two VMs rhel9-01 - This is my primary VM for learning rhcsa-student01 - Used from the start of todays course following Sander&amp;rsquo;s instructions.</description>
     </item>
   </channel>
 </rss>

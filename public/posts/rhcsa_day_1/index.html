@@ -1,0 +1,2530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+   · Curtis Bunch
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Curtis Bunch">
+<meta name="description" content="📚 RHCSA Bootcamp Day 1 Link to heading 🏷️Tags : #04-2024 #lecture ## Other days [RHCSA Bootcamp Day 2](RHCSA Bootcamp Day 2 &ldquo;wikilink&rdquo;) [RHCSA Bootcamp Day 3](RHCSA Bootcamp Day 3 &ldquo;wikilink&rdquo;) [RHCSA Bootcamp Day 4](RHCSA Bootcamp Day 4 &ldquo;wikilink&rdquo;) ## Slides Templates Link to heading moduleName Link to heading Commands Link to heading #commands Output Link to heading #output 📝 Notes Link to heading Getting Started Link to heading Setup two VMs rhel9-01 - This is my primary VM for learning rhcsa-student01 - Used from the start of todays course following Sander&rsquo;s instructions.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="📚 RHCSA Bootcamp Day 1 Link to heading 🏷️Tags : #04-2024 #lecture ## Other days [RHCSA Bootcamp Day 2](RHCSA Bootcamp Day 2 &ldquo;wikilink&rdquo;) [RHCSA Bootcamp Day 3](RHCSA Bootcamp Day 3 &ldquo;wikilink&rdquo;) [RHCSA Bootcamp Day 4](RHCSA Bootcamp Day 4 &ldquo;wikilink&rdquo;) ## Slides Templates Link to heading moduleName Link to heading Commands Link to heading #commands Output Link to heading #output 📝 Notes Link to heading Getting Started Link to heading Setup two VMs rhel9-01 - This is my primary VM for learning rhcsa-student01 - Used from the start of todays course following Sander&rsquo;s instructions."/>
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="📚 RHCSA Bootcamp Day 1 Link to heading 🏷️Tags : #04-2024 #lecture ## Other days [RHCSA Bootcamp Day 2](RHCSA Bootcamp Day 2 &ldquo;wikilink&rdquo;) [RHCSA Bootcamp Day 3](RHCSA Bootcamp Day 3 &ldquo;wikilink&rdquo;) [RHCSA Bootcamp Day 4](RHCSA Bootcamp Day 4 &ldquo;wikilink&rdquo;) ## Slides Templates Link to heading moduleName Link to heading Commands Link to heading #commands Output Link to heading #output 📝 Notes Link to heading Getting Started Link to heading Setup two VMs rhel9-01 - This is my primary VM for learning rhcsa-student01 - Used from the start of todays course following Sander&rsquo;s instructions." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/rhcsa_day_1/" /><meta property="article:section" content="posts" />
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/rhcsa_day_1/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Curtis Bunch
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/posts/rhcsa_day_1/">
+          
+        </a>
+      </h1>
+    </header>
+
+    <h1 id="-rhcsa-bootcamp-day-1">
+  📚 RHCSA Bootcamp Day 1
+  <a class="heading-link" href="#-rhcsa-bootcamp-day-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<ul>
+<li><strong>🏷️Tags</strong> : #04-2024 #lecture
+## Other days</li>
+<li>[RHCSA Bootcamp Day 2](RHCSA Bootcamp Day 2 &ldquo;wikilink&rdquo;)</li>
+<li>[RHCSA Bootcamp Day 3](RHCSA Bootcamp Day 3 &ldquo;wikilink&rdquo;)</li>
+<li>[RHCSA Bootcamp Day 4](RHCSA Bootcamp Day 4 &ldquo;wikilink&rdquo;)
+## Slides
+<img src="rhcsa911711116394427.pdf" alt="" title="wikilink"></li>
+</ul>
+<h2 id="templates">
+  Templates
+  <a class="heading-link" href="#templates">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h4 id="modulename">
+  moduleName
+  <a class="heading-link" href="#modulename">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<h5 id="commands">
+  Commands
+  <a class="heading-link" href="#commands">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#commands</span>
+</span></span></code></pre></div><h5 id="output">
+  Output
+  <a class="heading-link" href="#output">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#output</span>
+</span></span></code></pre></div><h2 id="-notes">
+  📝 Notes
+  <a class="heading-link" href="#-notes">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="getting-started">
+  Getting Started
+  <a class="heading-link" href="#getting-started">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Setup two VMs
+<ul>
+<li><a href="rhel9-01" title="wikilink" >rhel9-01</a> - This is my primary VM for learning</li>
+<li><a href="rhcsa-student01" title="wikilink" >rhcsa-student01</a> - Used from the start of todays course following Sander&rsquo;s instructions.
+#### Tasks
+##### Task 1
+Use tar to create a gzipped archive that contains the contents of the /etc directory as relative file names, and write the archive to /root/archive.tgz</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#command</span>
+</span></span><span style="display:flex;"><span>tar czvf /root/archive.tgz -C / etc
+</span></span></code></pre></div><p>Let&rsquo;s break down the options used in the command:</p>
+<ul>
+<li><code>c</code>: Create a new archive.</li>
+<li><code>z</code>: Compress the archive using gzip.</li>
+<li><code>v</code>: Verbose mode, which displays the filenames as they are archived.</li>
+<li><code>f</code>: Use the archive file specified as the next argument (<code>/root/archive.tgz</code> in this case).</li>
+<li><code>-C /</code>: This option changes to the root directory (<code>/</code>) before performing any operations. This ensures that the paths stored in the archive are relative to the root directory.
+###### Output</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#output</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">[</span>student@rhel9-01 rhcsa<span style="color:#ff7b72;font-weight:bold">]</span>$ sudo tar czvf /root/archive.tgz -C / etc
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">[</span>sudo<span style="color:#ff7b72;font-weight:bold">]</span> password <span style="color:#ff7b72">for</span> student:
+</span></span><span style="display:flex;"><span>etc/
+</span></span><span style="display:flex;"><span>etc/mtab
+</span></span><span style="display:flex;"><span>etc/fstab
+</span></span><span style="display:flex;"><span>etc/crypttab
+</span></span><span style="display:flex;"><span>etc/lvm/
+</span></span><span style="display:flex;"><span>etc/lvm/devices/
+</span></span><span style="display:flex;"><span>etc/lvm/devices/system.devices
+</span></span><span style="display:flex;"><span>etc/lvm/archive/
+</span></span><span style="display:flex;"><span>etc/lvm/archive/rhel_00000-1391670426.vg
+</span></span><span style="display:flex;"><span>etc/lvm/backup/
+</span></span><span style="display:flex;"><span>etc/lvm/backup/rhel
+</span></span><span style="display:flex;"><span>etc/lvm/cache/
+</span></span><span style="display:flex;"><span>etc/lvm/lvm.conf
+</span></span><span style="display:flex;"><span>etc/lvm/lvmlocal.conf
+</span></span><span style="display:flex;"><span>etc/lvm/profile/
+</span></span><span style="display:flex;"><span>etc/lvm/profile/cache-mq.profile
+</span></span><span style="display:flex;"><span>etc/lvm/profile/cache-smq.profile
+</span></span><span style="display:flex;"><span>etc/lvm/profile/command_profile_template.profile
+</span></span><span style="display:flex;"><span>etc/lvm/profile/lvmdbusd.profile
+</span></span><span style="display:flex;"><span>etc/lvm/profile/metadata_profile_template.profile
+</span></span><span style="display:flex;"><span>etc/lvm/profile/thin-generic.profile
+</span></span><span style="display:flex;"><span>etc/lvm/profile/thin-performance.profile
+</span></span><span style="display:flex;"><span>etc/lvm/profile/vdo-small.profile
+</span></span><span style="display:flex;"><span>etc/resolv.conf
+</span></span><span style="display:flex;"><span>etc/dnf/
+</span></span><span style="display:flex;"><span>etc/dnf/modules.d/
+</span></span><span style="display:flex;"><span>etc/dnf/aliases.d/
+</span></span><span style="display:flex;"><span>etc/dnf/dnf.conf
+</span></span><span style="display:flex;"><span>etc/dnf/modules.defaults.d/
+</span></span><span style="display:flex;"><span>etc/dnf/plugins/
+</span></span><span style="display:flex;"><span>etc/dnf/plugins/copr.conf
+</span></span><span style="display:flex;"><span>etc/dnf/plugins/copr.d/
+</span></span><span style="display:flex;"><span>etc/dnf/plugins/debuginfo-install.conf
+</span></span><span style="display:flex;"><span>etc/dnf/plugins/kpatch.conf
+</span></span><span style="display:flex;"><span>etc/dnf/plugins/product-id.conf
+</span></span><span style="display:flex;"><span>etc/dnf/plugins/subscription-manager.conf
+</span></span><span style="display:flex;"><span>etc/dnf/protected.d/
+</span></span><span style="display:flex;"><span>etc/dnf/protected.d/dnf.conf
+</span></span><span style="display:flex;"><span>etc/dnf/protected.d/redhat-release.conf
+</span></span><span style="display:flex;"><span>etc/dnf/protected.d/setup.conf
+</span></span><span style="display:flex;"><span>etc/dnf/protected.d/systemd.conf
+</span></span><span style="display:flex;"><span>etc/dnf/protected.d/grub2-tools-minimal.conf
+</span></span><span style="display:flex;"><span>etc/dnf/protected.d/sudo.conf
+</span></span><span style="display:flex;"><span>etc/dnf/protected.d/yum.conf
+</span></span><span style="display:flex;"><span>etc/dnf/protected.d/grub2-pc.conf
+</span></span><span style="display:flex;"><span>etc/dnf/vars/
+</span></span><span style="display:flex;"><span>etc/fonts/
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/31-cantarell.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-0-google-noto-sans-cjk-ttc.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-google-noto-cjk-fonts.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-1-lohit-devanagari.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/59-liberation-mono.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-0-google-noto-serif-cjk-ttc.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/61-adobe-source-code-pro.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-0-jomolhari-fonts.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/20-unhint-small-dejavu-sans-mono.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-google-noto-sans-gurmukhi.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/57-dejavu-sans-mono-fonts.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-google-noto-sans-sinhala-vf.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/20-unhint-small-dejavu-sans.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-0-lohit-gujarati.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/57-dejavu-sans-fonts.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/61-julietaula-montserrat.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-google-droid-sans-fonts.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-0-khmer-os-system-fonts.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/61-urw-fallback-backwards.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-0-lohit-kannada.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/10-hinting-slight.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/30-lohit-odia.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/10-scale-bitmap-fonts.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-0-lohit-odia.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/11-lcdfilter-default.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-0-lohit-tamil.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/20-unhint-small-vera.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-0-lohit-telugu.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/25-no-bitmap-fedora.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-0-paktype-naskh-basic.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/25-unhint-nonlatin.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/58-pt-sans-fonts.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/30-metric-aliases.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/40-nonlatin.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/45-generic.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/45-latin.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/48-spacing.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/49-sansserif.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/50-user.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/51-local.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/60-generic.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/60-latin.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/66-sil-abyssinica-fonts.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-fonts-persian.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-nonlatin.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/69-unifont.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/80-delicious.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/90-synthetic.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/README
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/61-urw-bookman.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/61-urw-c059.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/66-sil-nuosu.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/61-urw-d050000l.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/61-urw-gothic.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-sil-padauk.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/61-urw-nimbus-mono-ps.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-0-smc-meera.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/61-urw-nimbus-roman.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-stix-fonts.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/61-urw-nimbus-sans.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/61-urw-p052.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-0-lohit-assamese.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/61-urw-standard-symbols-ps.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/61-urw-z003.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-0-lohit-bengali.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/65-0-thai-scalable-waree.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/59-liberation-sans.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/59-liberation-serif.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/59-lohit-devanagari.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/20-unhint-small-dejavu-serif.conf
+</span></span><span style="display:flex;"><span>etc/fonts/conf.d/57-dejavu-serif-fonts.conf
+</span></span><span style="display:flex;"><span>etc/fonts/fonts.conf
+</span></span><span style="display:flex;"><span>etc/crypto-policies/
+</span></span><span style="display:flex;"><span>etc/crypto-policies/back-ends/
+</span></span><span style="display:flex;"><span>etc/crypto-policies/back-ends/bind.config
+</span></span><span style="display:flex;"><span>etc/crypto-policies/back-ends/gnutls.config
+</span></span><span style="display:flex;"><span>etc/crypto-policies/back-ends/java.config
+</span></span><span style="display:flex;"><span>etc/crypto-policies/back-ends/javasystem.config
+</span></span><span style="display:flex;"><span>etc/crypto-policies/back-ends/krb5.config
+</span></span><span style="display:flex;"><span>etc/crypto-policies/back-ends/libreswan.config
+</span></span><span style="display:flex;"><span>etc/crypto-policies/back-ends/libssh.config
+</span></span><span style="display:flex;"><span>etc/crypto-policies/back-ends/nss.config
+</span></span><span style="display:flex;"><span>etc/crypto-policies/back-ends/openssh.config
+</span></span><span style="display:flex;"><span>etc/crypto-policies/back-ends/opensshserver.config
+</span></span><span style="display:flex;"><span>etc/crypto-policies/back-ends/openssl.config
+</span></span><span style="display:flex;"><span>etc/crypto-policies/back-ends/openssl_fips.config
+</span></span><span style="display:flex;"><span>etc/crypto-policies/back-ends/opensslcnf.config
+</span></span><span style="display:flex;"><span>etc/crypto-policies/local.d/
+</span></span><span style="display:flex;"><span>etc/crypto-policies/local.d/nss-p11-kit.config
+</span></span><span style="display:flex;"><span>etc/crypto-policies/policies/
+</span></span><span style="display:flex;"><span>etc/crypto-policies/policies/modules/
+</span></span><span style="display:flex;"><span>etc/crypto-policies/state/
+</span></span><span style="display:flex;"><span>etc/crypto-policies/state/current
+</span></span><span style="display:flex;"><span>etc/crypto-policies/state/CURRENT.pol
+</span></span><span style="display:flex;"><span>etc/crypto-policies/config
+</span></span><span style="display:flex;"><span>etc/skel/
+</span></span><span style="display:flex;"><span>etc/skel/.mozilla/
+</span></span><span style="display:flex;"><span>etc/skel/.mozilla/extensions/
+</span></span><span style="display:flex;"><span>etc/skel/.mozilla/plugins/
+</span></span><span style="display:flex;"><span>etc/skel/.bash_logout
+</span></span><span style="display:flex;"><span>etc/skel/.bash_profile
+</span></span><span style="display:flex;"><span>etc/skel/.bashrc
+</span></span><span style="display:flex;"><span>etc/rhsm/
+</span></span><span style="display:flex;"><span>etc/rhsm/ca/
+</span></span><span style="display:flex;"><span>etc/rhsm/ca/redhat-entitlement-authority.pem
+</span></span><span style="display:flex;"><span>etc/rhsm/ca/redhat-uep.pem
+</span></span><span style="display:flex;"><span>etc/rhsm/facts/
+</span></span><span style="display:flex;"><span>etc/rhsm/pluginconf.d/
+</span></span><span style="display:flex;"><span>etc/rhsm/rhsm.conf
+</span></span><span style="display:flex;"><span>etc/rhsm/syspurpose/
+</span></span><span style="display:flex;"><span>etc/rhsm/syspurpose/valid_fields.json
+</span></span><span style="display:flex;"><span>etc/rhsm/syspurpose/syspurpose.json
+</span></span><span style="display:flex;"><span>etc/libreport/
+</span></span><span style="display:flex;"><span>etc/libreport/events/
+</span></span><span style="display:flex;"><span>etc/libreport/events.d/
+</span></span><span style="display:flex;"><span>etc/libreport/events.d/collect_dnf.conf
+</span></span><span style="display:flex;"><span>etc/libreport/events.d/mdadm_event.conf
+</span></span><span style="display:flex;"><span>etc/libreport/plugins/
+</span></span><span style="display:flex;"><span>etc/libreport/workflows.d/
+</span></span><span style="display:flex;"><span>etc/gnupg/
+</span></span><span style="display:flex;"><span>etc/fuse.conf
+</span></span><span style="display:flex;"><span>etc/logrotate.d/
+</span></span><span style="display:flex;"><span>etc/logrotate.d/dnf
+</span></span><span style="display:flex;"><span>etc/logrotate.d/btmp
+</span></span><span style="display:flex;"><span>etc/logrotate.d/wtmp
+</span></span><span style="display:flex;"><span>etc/logrotate.d/samba
+</span></span><span style="display:flex;"><span>etc/logrotate.d/iscsiuiolog
+</span></span><span style="display:flex;"><span>etc/logrotate.d/rsyslog
+</span></span><span style="display:flex;"><span>etc/logrotate.d/wpa_supplicant
+</span></span><span style="display:flex;"><span>etc/logrotate.d/sssd
+</span></span><span style="display:flex;"><span>etc/logrotate.d/bootlog
+</span></span><span style="display:flex;"><span>etc/logrotate.d/kvm_stat
+</span></span><span style="display:flex;"><span>etc/logrotate.d/insights-client
+</span></span><span style="display:flex;"><span>etc/logrotate.d/subscription-manager
+</span></span><span style="display:flex;"><span>etc/logrotate.d/firewalld
+</span></span><span style="display:flex;"><span>etc/logrotate.d/chrony
+</span></span><span style="display:flex;"><span>etc/logrotate.d/psacct
+</span></span><span style="display:flex;"><span>etc/X11/
+</span></span><span style="display:flex;"><span>etc/X11/fontpath.d/
+</span></span><span style="display:flex;"><span>etc/X11/fontpath.d/liberation-mono-fonts
+</span></span><span style="display:flex;"><span>etc/X11/fontpath.d/liberation-sans-fonts
+</span></span><span style="display:flex;"><span>etc/X11/fontpath.d/liberation-serif-fonts
+</span></span><span style="display:flex;"><span>etc/X11/applnk/
+</span></span><span style="display:flex;"><span>etc/X11/xinit/
+</span></span><span style="display:flex;"><span>etc/X11/xinit/xinitrc.d/
+</span></span><span style="display:flex;"><span>etc/X11/xinit/xinitrc.d/localuser.sh
+</span></span><span style="display:flex;"><span>etc/X11/xinit/xinitrc.d/50-systemd-user.sh
+</span></span><span style="display:flex;"><span>etc/X11/xinit/xinput.d/
+</span></span><span style="display:flex;"><span>etc/X11/xinit/xinput.d/ibus.conf
+</span></span><span style="display:flex;"><span>etc/X11/xinit/Xclients
+</span></span><span style="display:flex;"><span>etc/X11/xinit/Xclients.d/
+</span></span><span style="display:flex;"><span>etc/X11/xinit/Xsession
+</span></span><span style="display:flex;"><span>etc/X11/xinit/xinitrc
+</span></span><span style="display:flex;"><span>etc/X11/xinit/xinitrc-common
+</span></span><span style="display:flex;"><span>etc/X11/xinit/xinputrc
+</span></span><span style="display:flex;"><span>etc/X11/Xmodmap
+</span></span><span style="display:flex;"><span>etc/X11/Xresources
+</span></span><span style="display:flex;"><span>etc/X11/xorg.conf.d/
+</span></span><span style="display:flex;"><span>etc/X11/xorg.conf.d/00-keyboard.conf
+</span></span><span style="display:flex;"><span>etc/X11/Xsession.d/
+</span></span><span style="display:flex;"><span>etc/X11/Xsession.d/90xbrlapi
+</span></span><span style="display:flex;"><span>etc/bash_completion.d/
+</span></span><span style="display:flex;"><span>etc/bash_completion.d/tracer
+</span></span><span style="display:flex;"><span>etc/bash_completion.d/authselect-completion.sh
+</span></span><span style="display:flex;"><span>etc/bash_completion.d/vdostats
+</span></span><span style="display:flex;"><span>etc/bash_completion.d/redefine_filedir
+</span></span><span style="display:flex;"><span>etc/bash_completion.d/bpftool
+</span></span><span style="display:flex;"><span>etc/bash_completion.d/iprconfig
+</span></span><span style="display:flex;"><span>etc/hp/
+</span></span><span style="display:flex;"><span>etc/hp/hplip.conf
+</span></span><span style="display:flex;"><span>etc/pki/
+</span></span><span style="display:flex;"><span>etc/pki/swid/
+</span></span><span style="display:flex;"><span>etc/pki/swid/CA/
+</span></span><span style="display:flex;"><span>etc/pki/swid/CA/redhat.com/
+</span></span><span style="display:flex;"><span>etc/pki/swid/CA/redhat.com/redhatcodesignca.cert
+</span></span><span style="display:flex;"><span>etc/pki/product-default/
+</span></span><span style="display:flex;"><span>etc/pki/product-default/479.pem
+</span></span><span style="display:flex;"><span>etc/pki/rpm-gpg/
+</span></span><span style="display:flex;"><span>etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-beta
+</span></span><span style="display:flex;"><span>etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+</span></span><span style="display:flex;"><span>etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-9
+</span></span><span style="display:flex;"><span>etc/pki/tls/
+</span></span><span style="display:flex;"><span>etc/pki/tls/certs/
+</span></span><span style="display:flex;"><span>etc/pki/tls/certs/ca-bundle.crt
+</span></span><span style="display:flex;"><span>etc/pki/tls/certs/ca-bundle.trust.crt
+</span></span><span style="display:flex;"><span>etc/pki/tls/ct_log_list.cnf
+</span></span><span style="display:flex;"><span>etc/pki/tls/fips_local.cnf
+</span></span><span style="display:flex;"><span>etc/pki/tls/misc/
+</span></span><span style="display:flex;"><span>etc/pki/tls/openssl.cnf
+</span></span><span style="display:flex;"><span>etc/pki/tls/private/
+</span></span><span style="display:flex;"><span>etc/pki/tls/cert.pem
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/extracted/
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/extracted/edk2/
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/extracted/edk2/README
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/extracted/edk2/cacerts.bin
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/extracted/README
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/extracted/java/
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/extracted/java/README
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/extracted/java/cacerts
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/extracted/openssl/
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/extracted/openssl/README
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/extracted/openssl/ca-bundle.trust.crt
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/extracted/pem/
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/extracted/pem/README
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/extracted/pem/email-ca-bundle.pem
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/extracted/pem/objsign-ca-bundle.pem
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/README
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/ca-legacy.conf
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/source/
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/source/README
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/source/anchors/
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/source/blocklist/
+</span></span><span style="display:flex;"><span>etc/pki/ca-trust/source/ca-bundle.legacy.crt
+</span></span><span style="display:flex;"><span>etc/pki/java/
+</span></span><span style="display:flex;"><span>etc/pki/java/cacerts
+</span></span><span style="display:flex;"><span>etc/pki/rsyslog/
+</span></span><span style="display:flex;"><span>etc/pki/nssdb/
+</span></span><span style="display:flex;"><span>etc/pki/nssdb/cert9.db
+</span></span><span style="display:flex;"><span>etc/pki/nssdb/key4.db
+</span></span><span style="display:flex;"><span>etc/pki/nssdb/pkcs11.txt
+</span></span><span style="display:flex;"><span>etc/pki/fwupd/
+</span></span><span style="display:flex;"><span>etc/pki/fwupd/GPG-KEY-Linux-Foundation-Firmware
+</span></span><span style="display:flex;"><span>etc/pki/fwupd/GPG-KEY-Linux-Vendor-Firmware-Service
+</span></span><span style="display:flex;"><span>etc/pki/fwupd/LVFS-CA.pem
+</span></span><span style="display:flex;"><span>etc/pki/fwupd-metadata/
+</span></span><span style="display:flex;"><span>etc/pki/fwupd-metadata/GPG-KEY-Linux-Foundation-Metadata
+</span></span><span style="display:flex;"><span>etc/pki/fwupd-metadata/GPG-KEY-Linux-Vendor-Firmware-Service
+</span></span><span style="display:flex;"><span>etc/pki/fwupd-metadata/LVFS-CA.pem
+</span></span><span style="display:flex;"><span>etc/pki/consumer/
+</span></span><span style="display:flex;"><span>etc/pki/consumer/key.pem
+</span></span><span style="display:flex;"><span>etc/pki/consumer/cert.pem
+</span></span><span style="display:flex;"><span>etc/pki/entitlement/
+</span></span><span style="display:flex;"><span>etc/pki/entitlement/7516372115803665970-key.pem
+</span></span><span style="display:flex;"><span>etc/pki/entitlement/7516372115803665970.pem
+</span></span><span style="display:flex;"><span>etc/pki/product/
+</span></span><span style="display:flex;"><span>etc/swid/
+</span></span><span style="display:flex;"><span>etc/swid/swidtags.d/
+</span></span><span style="display:flex;"><span>etc/swid/swidtags.d/redhat.com
+</span></span><span style="display:flex;"><span>etc/ostree/
+</span></span><span style="display:flex;"><span>etc/ostree/remotes.d/
+</span></span><span style="display:flex;"><span>etc/issue
+</span></span><span style="display:flex;"><span>etc/issue.d/
+</span></span><span style="display:flex;"><span>etc/issue.d/cockpit.issue
+</span></span><span style="display:flex;"><span>etc/rpm/
+</span></span><span style="display:flex;"><span>etc/udev/
+</span></span><span style="display:flex;"><span>etc/udev/hwdb.d/
+</span></span><span style="display:flex;"><span>etc/udev/rules.d/
+</span></span><span style="display:flex;"><span>etc/udev/udev.conf
+</span></span><span style="display:flex;"><span>etc/udev/hwdb.bin
+</span></span><span style="display:flex;"><span>etc/issue.net
+</span></span><span style="display:flex;"><span>etc/appstream.conf
+</span></span><span style="display:flex;"><span>etc/os-release
+</span></span><span style="display:flex;"><span>etc/libibverbs.d/
+</span></span><span style="display:flex;"><span>etc/libibverbs.d/bnxt_re.driver
+</span></span><span style="display:flex;"><span>etc/libibverbs.d/cxgb4.driver
+</span></span><span style="display:flex;"><span>etc/libibverbs.d/efa.driver
+</span></span><span style="display:flex;"><span>etc/libibverbs.d/hfi1verbs.driver
+</span></span><span style="display:flex;"><span>etc/libibverbs.d/hns.driver
+</span></span><span style="display:flex;"><span>etc/libibverbs.d/irdma.driver
+</span></span><span style="display:flex;"><span>etc/libibverbs.d/mana.driver
+</span></span><span style="display:flex;"><span>etc/libibverbs.d/mlx4.driver
+</span></span><span style="display:flex;"><span>etc/libibverbs.d/mlx5.driver
+</span></span><span style="display:flex;"><span>etc/libibverbs.d/qedr.driver
+</span></span><span style="display:flex;"><span>etc/libibverbs.d/rxe.driver
+</span></span><span style="display:flex;"><span>etc/libibverbs.d/siw.driver
+</span></span><span style="display:flex;"><span>etc/libibverbs.d/vmw_pvrdma.driver
+</span></span><span style="display:flex;"><span>etc/sssd/
+</span></span><span style="display:flex;"><span>etc/sssd/conf.d/
+</span></span><span style="display:flex;"><span>etc/sssd/pki/
+</span></span><span style="display:flex;"><span>etc/redhat-release
+</span></span><span style="display:flex;"><span>etc/gshadow-
+</span></span><span style="display:flex;"><span>etc/lsm/
+</span></span><span style="display:flex;"><span>etc/lsm/pluginconf.d/
+</span></span><span style="display:flex;"><span>etc/lsm/pluginconf.d/sim.conf
+</span></span><span style="display:flex;"><span>etc/lsm/lsmd.conf
+</span></span><span style="display:flex;"><span>etc/system-release
+</span></span><span style="display:flex;"><span>etc/group-
+</span></span><span style="display:flex;"><span>etc/cups/
+</span></span><span style="display:flex;"><span>etc/cups/cups-browsed.conf
+</span></span><span style="display:flex;"><span>etc/cups/classes.conf
+</span></span><span style="display:flex;"><span>etc/cups/client.conf
+</span></span><span style="display:flex;"><span>etc/cups/cups-files.conf
+</span></span><span style="display:flex;"><span>etc/cups/cups-files.conf.default
+</span></span><span style="display:flex;"><span>etc/cups/cupsd.conf
+</span></span><span style="display:flex;"><span>etc/cups/cupsd.conf.default
+</span></span><span style="display:flex;"><span>etc/cups/lpoptions
+</span></span><span style="display:flex;"><span>etc/cups/ppd/
+</span></span><span style="display:flex;"><span>etc/cups/printers.conf
+</span></span><span style="display:flex;"><span>etc/cups/snmp.conf
+</span></span><span style="display:flex;"><span>etc/cups/snmp.conf.default
+</span></span><span style="display:flex;"><span>etc/cups/ssl/
+</span></span><span style="display:flex;"><span>etc/cups/subscriptions.conf.O
+</span></span><span style="display:flex;"><span>etc/cups/subscriptions.conf
+</span></span><span style="display:flex;"><span>etc/system-release-cpe
+</span></span><span style="display:flex;"><span>etc/yum.repos.d/
+</span></span><span style="display:flex;"><span>etc/yum.repos.d/redhat.repo
+</span></span><span style="display:flex;"><span>etc/yum.repos.d/epel-cisco-openh264.repo
+</span></span><span style="display:flex;"><span>etc/yum.repos.d/epel-testing.repo
+</span></span><span style="display:flex;"><span>etc/yum.repos.d/epel.repo
+</span></span><span style="display:flex;"><span>etc/yum.repos.d/gh-cli.repo
+</span></span><span style="display:flex;"><span>etc/sane.d/
+</span></span><span style="display:flex;"><span>etc/sane.d/pieusb.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/airscan.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/dll.d/
+</span></span><span style="display:flex;"><span>etc/sane.d/dll.d/airscan
+</span></span><span style="display:flex;"><span>etc/sane.d/dll.d/hpaio
+</span></span><span style="display:flex;"><span>etc/sane.d/abaton.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/pixma.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/agfafocus.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/apple.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/artec.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/plustek_pp.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/artec_eplus48u.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/plustek.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/avision.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/bh.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/canon.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/qcam.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/canon630u.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/ricoh.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/canon_dr.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/rts8891.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/canon_lide70.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/teco1.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/canon_pp.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/tamarack.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/cardscan.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/teco2.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/coolscan.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/teco3.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/coolscan2.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/test.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/coolscan3.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/dc210.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/dc240.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/dc25.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/u12.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/dell1600n_net.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/dll.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/dmc.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/umax.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/epjitsu.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/epson.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/epson2.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/umax1220u.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/epsonds.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/umax_pp.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/fujitsu.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/v4l.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/genesys.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/xerox_mfp.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/gphoto2.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/gt68xx.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/hp.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/hp3900.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/hp4200.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/hp5400.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/hpsj5s.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/hs2p.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/ibm.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/kodak.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/kodakaio.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/kvs1025.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/leo.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/lexmark.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/ma1509.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/magicolor.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/matsushita.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/microtek.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/microtek2.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/mustek.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/mustek_pp.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/mustek_usb.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/nec.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/net.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/p5.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/pie.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/s9036.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/saned.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/sceptre.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/sharp.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/sm3840.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/snapscan.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/sp15c.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/st400.conf
+</span></span><span style="display:flex;"><span>etc/sane.d/stv680.conf
+</span></span><span style="display:flex;"><span>etc/aliases
+</span></span><span style="display:flex;"><span>etc/security/
+</span></span><span style="display:flex;"><span>etc/security/pwquality.conf
+</span></span><span style="display:flex;"><span>etc/security/pwquality.conf.d/
+</span></span><span style="display:flex;"><span>etc/security/access.conf
+</span></span><span style="display:flex;"><span>etc/security/chroot.conf
+</span></span><span style="display:flex;"><span>etc/security/console.apps/
+</span></span><span style="display:flex;"><span>etc/security/console.apps/config-util
+</span></span><span style="display:flex;"><span>etc/security/console.apps/subscription-manager
+</span></span><span style="display:flex;"><span>etc/security/console.handlers
+</span></span><span style="display:flex;"><span>etc/security/console.perms
+</span></span><span style="display:flex;"><span>etc/security/console.perms.d/
+</span></span><span style="display:flex;"><span>etc/security/faillock.conf
+</span></span><span style="display:flex;"><span>etc/security/group.conf
+</span></span><span style="display:flex;"><span>etc/security/limits.conf
+</span></span><span style="display:flex;"><span>etc/security/limits.d/
+</span></span><span style="display:flex;"><span>etc/security/limits.d/25-pw-rlimits.conf
+</span></span><span style="display:flex;"><span>etc/security/namespace.conf
+</span></span><span style="display:flex;"><span>etc/security/namespace.d/
+</span></span><span style="display:flex;"><span>etc/security/namespace.init
+</span></span><span style="display:flex;"><span>etc/security/opasswd
+</span></span><span style="display:flex;"><span>etc/security/pam_env.conf
+</span></span><span style="display:flex;"><span>etc/security/pwhistory.conf
+</span></span><span style="display:flex;"><span>etc/security/sepermit.conf
+</span></span><span style="display:flex;"><span>etc/security/time.conf
+</span></span><span style="display:flex;"><span>etc/bashrc
+</span></span><span style="display:flex;"><span>etc/pam.d/
+</span></span><span style="display:flex;"><span>etc/pam.d/config-util
+</span></span><span style="display:flex;"><span>etc/pam.d/other
+</span></span><span style="display:flex;"><span>etc/pam.d/login
+</span></span><span style="display:flex;"><span>etc/pam.d/remote
+</span></span><span style="display:flex;"><span>etc/pam.d/runuser
+</span></span><span style="display:flex;"><span>etc/pam.d/runuser-l
+</span></span><span style="display:flex;"><span>etc/pam.d/su
+</span></span><span style="display:flex;"><span>etc/pam.d/su-l
+</span></span><span style="display:flex;"><span>etc/pam.d/systemd-user
+</span></span><span style="display:flex;"><span>etc/pam.d/polkit-1
+</span></span><span style="display:flex;"><span>etc/pam.d/crond
+</span></span><span style="display:flex;"><span>etc/pam.d/passwd
+</span></span><span style="display:flex;"><span>etc/pam.d/vlock
+</span></span><span style="display:flex;"><span>etc/pam.d/sssd-shadowutils
+</span></span><span style="display:flex;"><span>etc/pam.d/sudo
+</span></span><span style="display:flex;"><span>etc/pam.d/sudo-i
+</span></span><span style="display:flex;"><span>etc/pam.d/xserver
+</span></span><span style="display:flex;"><span>etc/pam.d/cups
+</span></span><span style="display:flex;"><span>etc/pam.d/subscription-manager
+</span></span><span style="display:flex;"><span>etc/pam.d/gdm-autologin
+</span></span><span style="display:flex;"><span>etc/pam.d/gdm-fingerprint
+</span></span><span style="display:flex;"><span>etc/pam.d/gdm-launch-environment
+</span></span><span style="display:flex;"><span>etc/pam.d/gdm-password
+</span></span><span style="display:flex;"><span>etc/pam.d/gdm-pin
+</span></span><span style="display:flex;"><span>etc/pam.d/gdm-smartcard
+</span></span><span style="display:flex;"><span>etc/pam.d/cockpit
+</span></span><span style="display:flex;"><span>etc/pam.d/vmtoolsd
+</span></span><span style="display:flex;"><span>etc/pam.d/sshd
+</span></span><span style="display:flex;"><span>etc/pam.d/chfn
+</span></span><span style="display:flex;"><span>etc/pam.d/chsh
+</span></span><span style="display:flex;"><span>etc/pam.d/atd
+</span></span><span style="display:flex;"><span>etc/pam.d/system-auth
+</span></span><span style="display:flex;"><span>etc/pam.d/password-auth
+</span></span><span style="display:flex;"><span>etc/pam.d/fingerprint-auth
+</span></span><span style="display:flex;"><span>etc/pam.d/smartcard-auth
+</span></span><span style="display:flex;"><span>etc/pam.d/postlogin
+</span></span><span style="display:flex;"><span>etc/csh.cshrc
+</span></span><span style="display:flex;"><span>etc/passwd-
+</span></span><span style="display:flex;"><span>etc/csh.login
+</span></span><span style="display:flex;"><span>etc/shadow-
+</span></span><span style="display:flex;"><span>etc/environment
+</span></span><span style="display:flex;"><span>etc/tpm2-tss/
+</span></span><span style="display:flex;"><span>etc/tpm2-tss/fapi-config.json
+</span></span><span style="display:flex;"><span>etc/tpm2-tss/fapi-profiles/
+</span></span><span style="display:flex;"><span>etc/tpm2-tss/fapi-profiles/P_ECCP256SHA256.json
+</span></span><span style="display:flex;"><span>etc/tpm2-tss/fapi-profiles/P_RSA2048SHA256.json
+</span></span><span style="display:flex;"><span>etc/ethertypes
+</span></span><span style="display:flex;"><span>etc/inittab
+</span></span><span style="display:flex;"><span>etc/exports
+</span></span><span style="display:flex;"><span>etc/adjtime
+</span></span><span style="display:flex;"><span>etc/filesystems
+</span></span><span style="display:flex;"><span>etc/rc.d/
+</span></span><span style="display:flex;"><span>etc/rc.d/init.d/
+</span></span><span style="display:flex;"><span>etc/rc.d/init.d/README
+</span></span><span style="display:flex;"><span>etc/rc.d/rc.local
+</span></span><span style="display:flex;"><span>etc/cni/
+</span></span><span style="display:flex;"><span>etc/group
+</span></span><span style="display:flex;"><span>etc/tmpfiles.d/
+</span></span><span style="display:flex;"><span>etc/tmpfiles.d/sos.conf
+</span></span><span style="display:flex;"><span>etc/gshadow
+</span></span><span style="display:flex;"><span>etc/rc.local
+</span></span><span style="display:flex;"><span>etc/host.conf
+</span></span><span style="display:flex;"><span>etc/systemd/
+</span></span><span style="display:flex;"><span>etc/systemd/journald.conf
+</span></span><span style="display:flex;"><span>etc/systemd/logind.conf
+</span></span><span style="display:flex;"><span>etc/systemd/system/
+</span></span><span style="display:flex;"><span>etc/systemd/system/sysinit.target.wants/
+</span></span><span style="display:flex;"><span>etc/systemd/system/sysinit.target.wants/nis-domainname.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/sysinit.target.wants/systemd-network-generator.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/sysinit.target.wants/selinux-autorelabel-mark.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/sysinit.target.wants/iscsi-onboot.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/sysinit.target.wants/lvm2-monitor.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/sysinit.target.wants/lvm2-lvmpolld.socket
+</span></span><span style="display:flex;"><span>etc/systemd/system/sysinit.target.wants/multipathd.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/sysinit.target.wants/systemd-boot-update.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/ctrl-alt-del.target
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/remote-fs.target
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/avahi-daemon.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/crond.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/auditd.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/rsyslog.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/mdmonitor.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/NetworkManager.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/sssd.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/ModemManager.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/kdump.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/libstoragemgmt.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/cups.path
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/cups.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/insights-client-boot.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/rhsmcertd.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/vmtoolsd.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/firewalld.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/tuned.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/sshd.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/atd.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/chronyd.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/mcelog.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/smartd.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/multi-user.target.wants/irqbalance.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/getty.target.wants/
+</span></span><span style="display:flex;"><span>etc/systemd/system/getty.target.wants/getty@tty1.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/sockets.target.wants/
+</span></span><span style="display:flex;"><span>etc/systemd/system/sockets.target.wants/dbus.socket
+</span></span><span style="display:flex;"><span>etc/systemd/system/sockets.target.wants/avahi-daemon.socket
+</span></span><span style="display:flex;"><span>etc/systemd/system/sockets.target.wants/iscsiuio.socket
+</span></span><span style="display:flex;"><span>etc/systemd/system/sockets.target.wants/iscsid.socket
+</span></span><span style="display:flex;"><span>etc/systemd/system/sockets.target.wants/dm-event.socket
+</span></span><span style="display:flex;"><span>etc/systemd/system/sockets.target.wants/multipathd.socket
+</span></span><span style="display:flex;"><span>etc/systemd/system/sockets.target.wants/cups.socket
+</span></span><span style="display:flex;"><span>etc/systemd/system/sockets.target.wants/sssd-kcm.socket
+</span></span><span style="display:flex;"><span>etc/systemd/system/dbus.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/dbus-org.freedesktop.Avahi.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/graphical.target.wants/
+</span></span><span style="display:flex;"><span>etc/systemd/system/graphical.target.wants/accounts-daemon.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/graphical.target.wants/rtkit-daemon.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/graphical.target.wants/upower.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/graphical.target.wants/switcheroo-control.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/graphical.target.wants/udisks2.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/graphical.target.wants/power-profiles-daemon.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/dbus-org.bluez.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/bluetooth.target.wants/
+</span></span><span style="display:flex;"><span>etc/systemd/system/bluetooth.target.wants/bluetooth.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/timers.target.wants/
+</span></span><span style="display:flex;"><span>etc/systemd/system/timers.target.wants/logrotate.timer
+</span></span><span style="display:flex;"><span>etc/systemd/system/timers.target.wants/dnf-makecache.timer
+</span></span><span style="display:flex;"><span>etc/systemd/system/timers.target.wants/mlocate-updatedb.timer
+</span></span><span style="display:flex;"><span>etc/systemd/system/remote-fs.target.wants/
+</span></span><span style="display:flex;"><span>etc/systemd/system/remote-fs.target.wants/iscsi.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/network-online.target.wants/
+</span></span><span style="display:flex;"><span>etc/systemd/system/network-online.target.wants/NetworkManager-wait-online.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/dbus-org.freedesktop.ModemManager1.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/basic.target.wants/
+</span></span><span style="display:flex;"><span>etc/systemd/system/basic.target.wants/low-memory-monitor.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/basic.target.wants/microcode.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/local-fs.target.wants/
+</span></span><span style="display:flex;"><span>etc/systemd/system/local-fs.target.wants/ostree-remount.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/printer.target.wants/
+</span></span><span style="display:flex;"><span>etc/systemd/system/printer.target.wants/cups.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/display-manager.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/vmtoolsd.service.requires/
+</span></span><span style="display:flex;"><span>etc/systemd/system/vmtoolsd.service.requires/vgauthd.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/default.target.wants/
+</span></span><span style="display:flex;"><span>etc/systemd/system/default.target.wants/nvmefc-boot-connections.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/dev-virtio<span style="color:#79c0ff">\\</span>x2dports-org.qemu.guest_agent.0.device.wants/
+</span></span><span style="display:flex;"><span>etc/systemd/system/dev-virtio<span style="color:#79c0ff">\\</span>x2dports-org.qemu.guest_agent.0.device.wants/qemu-guest-agent.service
+</span></span><span style="display:flex;"><span>etc/systemd/system/default.target
+</span></span><span style="display:flex;"><span>etc/systemd/system.conf
+</span></span><span style="display:flex;"><span>etc/systemd/user/
+</span></span><span style="display:flex;"><span>etc/systemd/user/timers.target.wants/
+</span></span><span style="display:flex;"><span>etc/systemd/user/timers.target.wants/systemd-tmpfiles-clean.timer
+</span></span><span style="display:flex;"><span>etc/systemd/user/basic.target.wants/
+</span></span><span style="display:flex;"><span>etc/systemd/user/basic.target.wants/systemd-tmpfiles-setup.service
+</span></span><span style="display:flex;"><span>etc/systemd/user/sockets.target.wants/
+</span></span><span style="display:flex;"><span>etc/systemd/user/sockets.target.wants/dbus.socket
+</span></span><span style="display:flex;"><span>etc/systemd/user/sockets.target.wants/pipewire.socket
+</span></span><span style="display:flex;"><span>etc/systemd/user/sockets.target.wants/pipewire-pulse.socket
+</span></span><span style="display:flex;"><span>etc/systemd/user/dbus.service
+</span></span><span style="display:flex;"><span>etc/systemd/user/dbus-org.bluez.obex.service
+</span></span><span style="display:flex;"><span>etc/systemd/user/pipewire-session-manager.service
+</span></span><span style="display:flex;"><span>etc/systemd/user/pipewire.service.wants/
+</span></span><span style="display:flex;"><span>etc/systemd/user/pipewire.service.wants/wireplumber.service
+</span></span><span style="display:flex;"><span>etc/systemd/user.conf
+</span></span><span style="display:flex;"><span>etc/systemd/coredump.conf
+</span></span><span style="display:flex;"><span>etc/systemd/pstore.conf
+</span></span><span style="display:flex;"><span>etc/systemd/sleep.conf
+</span></span><span style="display:flex;"><span>etc/hosts
+</span></span><span style="display:flex;"><span>etc/machine-id
+</span></span><span style="display:flex;"><span>etc/inputrc
+</span></span><span style="display:flex;"><span>etc/dbus-1/
+</span></span><span style="display:flex;"><span>etc/dbus-1/session.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/session.d/
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/org.freedesktop.PolicyKit1.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/avahi-dbus.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/org.freedesktop.Accounts.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/bluetooth.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/org.freedesktop.RealtimeKit1.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/wpa_supplicant.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/net.hadess.SensorProxy.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/org.opensuse.CupsPkHelper.Mechanism.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/org.freedesktop.GeoClue2.Agent.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/org.freedesktop.GeoClue2.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/org.freedesktop.ModemManager1.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/org.freedesktop.PackageKit.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/net.hadess.SwitcherooControl.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/org.selinux.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/org.freedesktop.Flatpak.SystemHelper.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/org.fedoraproject.SetroubleshootFixit.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/org.fedoraproject.SetroubleshootPrivileged.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/org.fedoraproject.Setroubleshootd.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/cups.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/com.redhat.RHSM1.Facts.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/com.redhat.RHSM1.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/teamd.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/net.hadess.PowerProfiles.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/com.redhat.NewPrinterNotification.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/com.redhat.PrinterDriversInstaller.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/gdm.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/org.freedesktop.realmd.conf
+</span></span><span style="display:flex;"><span>etc/dbus-1/system.d/dnsmasq.conf
+</span></span><span style="display:flex;"><span>etc/motd
+</span></span><span style="display:flex;"><span>etc/motd.d/
+</span></span><span style="display:flex;"><span>etc/motd.d/insights-client
+</span></span><span style="display:flex;"><span>etc/motd.d/cockpit
+</span></span><span style="display:flex;"><span>etc/dconf/
+</span></span><span style="display:flex;"><span>etc/dconf/db/
+</span></span><span style="display:flex;"><span>etc/dconf/db/distro.d/
+</span></span><span style="display:flex;"><span>etc/dconf/db/distro.d/locks/
+</span></span><span style="display:flex;"><span>etc/dconf/db/distro.d/locks/20-authselect
+</span></span><span style="display:flex;"><span>etc/dconf/db/distro.d/20-authselect
+</span></span><span style="display:flex;"><span>etc/dconf/db/local.d/
+</span></span><span style="display:flex;"><span>etc/dconf/db/local.d/locks/
+</span></span><span style="display:flex;"><span>etc/dconf/db/site.d/
+</span></span><span style="display:flex;"><span>etc/dconf/db/site.d/locks/
+</span></span><span style="display:flex;"><span>etc/dconf/db/ibus.d/
+</span></span><span style="display:flex;"><span>etc/dconf/db/ibus.d/00-upstream-settings
+</span></span><span style="display:flex;"><span>etc/dconf/db/gdm.d/
+</span></span><span style="display:flex;"><span>etc/dconf/db/gdm.d/locks/
+</span></span><span style="display:flex;"><span>etc/dconf/db/distro
+</span></span><span style="display:flex;"><span>etc/dconf/db/local
+</span></span><span style="display:flex;"><span>etc/dconf/db/site
+</span></span><span style="display:flex;"><span>etc/dconf/db/ibus
+</span></span><span style="display:flex;"><span>etc/dconf/db/gdm
+</span></span><span style="display:flex;"><span>etc/dconf/profile/
+</span></span><span style="display:flex;"><span>etc/dconf/profile/user
+</span></span><span style="display:flex;"><span>etc/dconf/profile/ibus
+</span></span><span style="display:flex;"><span>etc/networks
+</span></span><span style="display:flex;"><span>etc/sestatus.conf
+</span></span><span style="display:flex;"><span>etc/passwd
+</span></span><span style="display:flex;"><span>etc/accountsservice/
+</span></span><span style="display:flex;"><span>etc/accountsservice/user-templates/
+</span></span><span style="display:flex;"><span>etc/printcap
+</span></span><span style="display:flex;"><span>etc/bluetooth/
+</span></span><span style="display:flex;"><span>etc/bluetooth/main.conf
+</span></span><span style="display:flex;"><span>etc/profile
+</span></span><span style="display:flex;"><span>etc/profile.d/
+</span></span><span style="display:flex;"><span>etc/profile.d/csh.local
+</span></span><span style="display:flex;"><span>etc/profile.d/lang.csh
+</span></span><span style="display:flex;"><span>etc/profile.d/lang.sh
+</span></span><span style="display:flex;"><span>etc/profile.d/sh.local
+</span></span><span style="display:flex;"><span>etc/profile.d/which2.csh
+</span></span><span style="display:flex;"><span>etc/profile.d/which2.sh
+</span></span><span style="display:flex;"><span>etc/profile.d/gawk.csh
+</span></span><span style="display:flex;"><span>etc/profile.d/gawk.sh
+</span></span><span style="display:flex;"><span>etc/profile.d/colorgrep.csh
+</span></span><span style="display:flex;"><span>etc/profile.d/colorgrep.sh
+</span></span><span style="display:flex;"><span>etc/profile.d/colorxzgrep.csh
+</span></span><span style="display:flex;"><span>etc/profile.d/colorxzgrep.sh
+</span></span><span style="display:flex;"><span>etc/profile.d/less.csh
+</span></span><span style="display:flex;"><span>etc/profile.d/less.sh
+</span></span><span style="display:flex;"><span>etc/profile.d/vte.csh
+</span></span><span style="display:flex;"><span>etc/profile.d/vte.sh
+</span></span><span style="display:flex;"><span>etc/profile.d/colorls.csh
+</span></span><span style="display:flex;"><span>etc/profile.d/colorls.sh
+</span></span><span style="display:flex;"><span>etc/profile.d/colorzgrep.csh
+</span></span><span style="display:flex;"><span>etc/profile.d/colorzgrep.sh
+</span></span><span style="display:flex;"><span>etc/profile.d/debuginfod.csh
+</span></span><span style="display:flex;"><span>etc/profile.d/debuginfod.sh
+</span></span><span style="display:flex;"><span>etc/profile.d/flatpak.sh
+</span></span><span style="display:flex;"><span>etc/profile.d/PackageKit.sh
+</span></span><span style="display:flex;"><span>etc/profile.d/bash_completion.sh
+</span></span><span style="display:flex;"><span>etc/logrotate.conf
+</span></span><span style="display:flex;"><span>etc/protocols
+</span></span><span style="display:flex;"><span>etc/polkit-1/
+</span></span><span style="display:flex;"><span>etc/polkit-1/rules.d/
+</span></span><span style="display:flex;"><span>etc/polkit-1/rules.d/50-default.rules
+</span></span><span style="display:flex;"><span>etc/polkit-1/rules.d/49-polkit-pkla-compat.rules
+</span></span><span style="display:flex;"><span>etc/polkit-1/localauthority/
+</span></span><span style="display:flex;"><span>etc/polkit-1/localauthority/10-vendor.d/
+</span></span><span style="display:flex;"><span>etc/polkit-1/localauthority/20-org.d/
+</span></span><span style="display:flex;"><span>etc/polkit-1/localauthority/30-site.d/
+</span></span><span style="display:flex;"><span>etc/polkit-1/localauthority/50-local.d/
+</span></span><span style="display:flex;"><span>etc/polkit-1/localauthority/90-mandatory.d/
+</span></span><span style="display:flex;"><span>etc/polkit-1/localauthority.conf.d/
+</span></span><span style="display:flex;"><span>etc/services
+</span></span><span style="display:flex;"><span>etc/libuser.conf
+</span></span><span style="display:flex;"><span>etc/shadow
+</span></span><span style="display:flex;"><span>etc/avahi/
+</span></span><span style="display:flex;"><span>etc/avahi/avahi-daemon.conf
+</span></span><span style="display:flex;"><span>etc/avahi/etc/
+</span></span><span style="display:flex;"><span>etc/avahi/hosts
+</span></span><span style="display:flex;"><span>etc/avahi/services/
+</span></span><span style="display:flex;"><span>etc/shells
+</span></span><span style="display:flex;"><span>etc/samba/
+</span></span><span style="display:flex;"><span>etc/samba/lmhosts
+</span></span><span style="display:flex;"><span>etc/samba/smb.conf
+</span></span><span style="display:flex;"><span>etc/samba/smb.conf.example
+</span></span><span style="display:flex;"><span>etc/subgid
+</span></span><span style="display:flex;"><span>etc/grub.d/
+</span></span><span style="display:flex;"><span>etc/grub.d/00_header
+</span></span><span style="display:flex;"><span>etc/grub.d/01_users
+</span></span><span style="display:flex;"><span>etc/grub.d/08_fallback_counting
+</span></span><span style="display:flex;"><span>etc/grub.d/10_linux
+</span></span><span style="display:flex;"><span>etc/grub.d/10_reset_boot_success
+</span></span><span style="display:flex;"><span>etc/grub.d/12_menu_auto_hide
+</span></span><span style="display:flex;"><span>etc/grub.d/14_menu_show_once
+</span></span><span style="display:flex;"><span>etc/grub.d/20_linux_xen
+</span></span><span style="display:flex;"><span>etc/grub.d/20_ppc_terminfo
+</span></span><span style="display:flex;"><span>etc/grub.d/30_os-prober
+</span></span><span style="display:flex;"><span>etc/grub.d/30_uefi-firmware
+</span></span><span style="display:flex;"><span>etc/grub.d/40_custom
+</span></span><span style="display:flex;"><span>etc/grub.d/41_custom
+</span></span><span style="display:flex;"><span>etc/grub.d/README
+</span></span><span style="display:flex;"><span>etc/grub.d/35_fwupd
+</span></span><span style="display:flex;"><span>etc/grub.d/00_tuned
+</span></span><span style="display:flex;"><span>etc/subuid
+</span></span><span style="display:flex;"><span>etc/opt/
+</span></span><span style="display:flex;"><span>etc/opt/chrome/
+</span></span><span style="display:flex;"><span>etc/opt/chrome/native-messaging-hosts/
+</span></span><span style="display:flex;"><span>etc/opt/chrome/native-messaging-hosts/org.gnome.browser_connector.json
+</span></span><span style="display:flex;"><span>etc/opt/chrome/native-messaging-hosts/org.gnome.chrome_gnome_shell.json
+</span></span><span style="display:flex;"><span>etc/pm/
+</span></span><span style="display:flex;"><span>etc/pm/config.d/
+</span></span><span style="display:flex;"><span>etc/pm/power.d/
+</span></span><span style="display:flex;"><span>etc/pm/sleep.d/
+</span></span><span style="display:flex;"><span>etc/rwtab.d/
+</span></span><span style="display:flex;"><span>etc/rwtab.d/logrotate
+</span></span><span style="display:flex;"><span>etc/rwtab.d/sssd
+</span></span><span style="display:flex;"><span>etc/statetab.d/
+</span></span><span style="display:flex;"><span>etc/sysconfig/
+</span></span><span style="display:flex;"><span>etc/sysconfig/nftables.conf
+</span></span><span style="display:flex;"><span>etc/sysconfig/selinux
+</span></span><span style="display:flex;"><span>etc/sysconfig/samba
+</span></span><span style="display:flex;"><span>etc/sysconfig/crond
+</span></span><span style="display:flex;"><span>etc/sysconfig/run-parts
+</span></span><span style="display:flex;"><span>etc/sysconfig/rsyslog
+</span></span><span style="display:flex;"><span>etc/sysconfig/raid-check
+</span></span><span style="display:flex;"><span>etc/sysconfig/wpa_supplicant
+</span></span><span style="display:flex;"><span>etc/sysconfig/network-scripts/
+</span></span><span style="display:flex;"><span>etc/sysconfig/network-scripts/readme-ifcfg-rh.txt
+</span></span><span style="display:flex;"><span>etc/sysconfig/kdump
+</span></span><span style="display:flex;"><span>etc/sysconfig/cpupower
+</span></span><span style="display:flex;"><span>etc/sysconfig/rasdaemon
+</span></span><span style="display:flex;"><span>etc/sysconfig/firewalld
+</span></span><span style="display:flex;"><span>etc/sysconfig/sshd
+</span></span><span style="display:flex;"><span>etc/sysconfig/atd
+</span></span><span style="display:flex;"><span>etc/sysconfig/chronyd
+</span></span><span style="display:flex;"><span>etc/sysconfig/smartmontools
+</span></span><span style="display:flex;"><span>etc/sysconfig/man-db
+</span></span><span style="display:flex;"><span>etc/sysconfig/irqbalance
+</span></span><span style="display:flex;"><span>etc/sysconfig/kernel
+</span></span><span style="display:flex;"><span>etc/sysconfig/anaconda
+</span></span><span style="display:flex;"><span>etc/sysconfig/network
+</span></span><span style="display:flex;"><span>etc/sysconfig/qemu-ga
+</span></span><span style="display:flex;"><span>etc/xdg/
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/xdg-user-dirs.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/at-spi-dbus-bus.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/geoclue-demo-agent.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/tracker-miner-fs-3.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/gnome-software-service.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/org.gnome.SettingsDaemon.A11ySettings.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/org.gnome.SettingsDaemon.Color.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/org.gnome.SettingsDaemon.Datetime.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/spice-vdagent.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/org.gnome.SettingsDaemon.Housekeeping.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/org.gnome.SettingsDaemon.Keyboard.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/org.gnome.SettingsDaemon.MediaKeys.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/org.gnome.SettingsDaemon.Power.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/org.gnome.SettingsDaemon.DiskUtilityNotify.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/org.gnome.SettingsDaemon.PrintNotifications.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/org.gnome.SettingsDaemon.Rfkill.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/org.gnome.SettingsDaemon.ScreensaverProxy.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/org.gnome.SettingsDaemon.Sharing.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/org.gnome.SettingsDaemon.Smartcard.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/org.gnome.SettingsDaemon.Sound.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/org.gnome.SettingsDaemon.Subscription.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/org.gnome.SettingsDaemon.UsbProtection.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/org.gnome.SettingsDaemon.Wacom.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/org.gnome.SettingsDaemon.Wwan.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/org.gnome.SettingsDaemon.XSettings.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/gnome-keyring-pkcs11.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/gnome-keyring-secrets.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/gnome-keyring-ssh.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/user-dirs-update-gtk.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/org.gnome.Evolution-alarm-notify.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/gnome-shell-overrides-migration.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/vmware-user.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/gnome-initial-setup-copy-worker.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/gnome-initial-setup-first-login.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/autostart/orca-autostart.desktop
+</span></span><span style="display:flex;"><span>etc/xdg/user-dirs.conf
+</span></span><span style="display:flex;"><span>etc/xdg/user-dirs.defaults
+</span></span><span style="display:flex;"><span>etc/xdg/menus/
+</span></span><span style="display:flex;"><span>etc/xdg/menus/applications.menu
+</span></span><span style="display:flex;"><span>etc/xdg/menus/gnome-applications.menu
+</span></span><span style="display:flex;"><span>etc/xdg/systemd/
+</span></span><span style="display:flex;"><span>etc/xdg/systemd/user
+</span></span><span style="display:flex;"><span>etc/xdg/Xwayland-session.d/
+</span></span><span style="display:flex;"><span>etc/xdg/Xwayland-session.d/00-at-spi
+</span></span><span style="display:flex;"><span>etc/xdg/Xwayland-session.d/00-xrdb
+</span></span><span style="display:flex;"><span>etc/terminfo/
+</span></span><span style="display:flex;"><span>etc/cron.hourly/
+</span></span><span style="display:flex;"><span>etc/cron.hourly/0anacron
+</span></span><span style="display:flex;"><span>etc/ld.so.conf
+</span></span><span style="display:flex;"><span>etc/ld.so.conf.d/
+</span></span><span style="display:flex;"><span>etc/ld.so.conf.d/pipewire-jack-x86_64.conf
+</span></span><span style="display:flex;"><span>etc/libpaper.d/
+</span></span><span style="display:flex;"><span>etc/bindresvport.blacklist
+</span></span><span style="display:flex;"><span>etc/cron.monthly/
+</span></span><span style="display:flex;"><span>etc/rpc
+</span></span><span style="display:flex;"><span>etc/rsyslog.d/
+</span></span><span style="display:flex;"><span>etc/ld.so.cache
+</span></span><span style="display:flex;"><span>etc/popt.d/
+</span></span><span style="display:flex;"><span>etc/anacrontab
+</span></span><span style="display:flex;"><span>etc/asound.conf
+</span></span><span style="display:flex;"><span>etc/openldap/
+</span></span><span style="display:flex;"><span>etc/openldap/certs/
+</span></span><span style="display:flex;"><span>etc/openldap/ldap.conf
+</span></span><span style="display:flex;"><span>etc/sos/
+</span></span><span style="display:flex;"><span>etc/sos/cleaner/
+</span></span><span style="display:flex;"><span>etc/sos/extras.d/
+</span></span><span style="display:flex;"><span>etc/sos/groups.d/
+</span></span><span style="display:flex;"><span>etc/sos/presets.d/
+</span></span><span style="display:flex;"><span>etc/sos/sos.conf
+</span></span><span style="display:flex;"><span>etc/libaudit.conf
+</span></span><span style="display:flex;"><span>etc/alternatives/
+</span></span><span style="display:flex;"><span>etc/alternatives/libnssckbi.so.x86_64
+</span></span><span style="display:flex;"><span>etc/alternatives/soelim
+</span></span><span style="display:flex;"><span>etc/alternatives/soelim.1.gz
+</span></span><span style="display:flex;"><span>etc/alternatives/iptables
+</span></span><span style="display:flex;"><span>etc/alternatives/ip6tables
+</span></span><span style="display:flex;"><span>etc/alternatives/iptables-restore
+</span></span><span style="display:flex;"><span>etc/alternatives/iptables-save
+</span></span><span style="display:flex;"><span>etc/alternatives/ip6tables-restore
+</span></span><span style="display:flex;"><span>etc/alternatives/ip6tables-save
+</span></span><span style="display:flex;"><span>etc/alternatives/ebtables
+</span></span><span style="display:flex;"><span>etc/alternatives/ebtables-save
+</span></span><span style="display:flex;"><span>etc/alternatives/ebtables-restore
+</span></span><span style="display:flex;"><span>etc/alternatives/ebtables-man
+</span></span><span style="display:flex;"><span>etc/alternatives/arptables
+</span></span><span style="display:flex;"><span>etc/alternatives/arptables-save
+</span></span><span style="display:flex;"><span>etc/alternatives/arptables-restore
+</span></span><span style="display:flex;"><span>etc/alternatives/arptables-man
+</span></span><span style="display:flex;"><span>etc/alternatives/arptables-save-man
+</span></span><span style="display:flex;"><span>etc/alternatives/arptables-restore-man
+</span></span><span style="display:flex;"><span>etc/alternatives/arptables-helper
+</span></span><span style="display:flex;"><span>etc/alternatives/print
+</span></span><span style="display:flex;"><span>etc/alternatives/print-lp
+</span></span><span style="display:flex;"><span>etc/alternatives/print-lpq
+</span></span><span style="display:flex;"><span>etc/alternatives/print-lprm
+</span></span><span style="display:flex;"><span>etc/alternatives/print-lpstat
+</span></span><span style="display:flex;"><span>etc/alternatives/print-cancel
+</span></span><span style="display:flex;"><span>etc/alternatives/print-lpc
+</span></span><span style="display:flex;"><span>etc/alternatives/print-cancelman
+</span></span><span style="display:flex;"><span>etc/alternatives/print-lpman
+</span></span><span style="display:flex;"><span>etc/alternatives/print-lpcman
+</span></span><span style="display:flex;"><span>etc/alternatives/print-lpqman
+</span></span><span style="display:flex;"><span>etc/alternatives/print-lprman
+</span></span><span style="display:flex;"><span>etc/alternatives/print-lprmman
+</span></span><span style="display:flex;"><span>etc/alternatives/print-lpstatman
+</span></span><span style="display:flex;"><span>etc/alternatives/ld
+</span></span><span style="display:flex;"><span>etc/alternatives/cifs-idmap-plugin
+</span></span><span style="display:flex;"><span>etc/alternatives/xinputrc
+</span></span><span style="display:flex;"><span>etc/alternatives/man
+</span></span><span style="display:flex;"><span>etc/alternatives/apropos
+</span></span><span style="display:flex;"><span>etc/alternatives/whatis
+</span></span><span style="display:flex;"><span>etc/alternatives/man.1.gz
+</span></span><span style="display:flex;"><span>etc/alternatives/apropos.1.gz
+</span></span><span style="display:flex;"><span>etc/alternatives/whatis.1.gz
+</span></span><span style="display:flex;"><span>etc/alternatives/nc
+</span></span><span style="display:flex;"><span>etc/alternatives/nc-man
+</span></span><span style="display:flex;"><span>etc/alternatives/man.7.gz
+</span></span><span style="display:flex;"><span>etc/pkcs11/
+</span></span><span style="display:flex;"><span>etc/pkcs11/modules/
+</span></span><span style="display:flex;"><span>etc/gcrypt/
+</span></span><span style="display:flex;"><span>etc/libnl/
+</span></span><span style="display:flex;"><span>etc/libnl/classid
+</span></span><span style="display:flex;"><span>etc/libnl/pktloc
+</span></span><span style="display:flex;"><span>etc/cron.d/
+</span></span><span style="display:flex;"><span>etc/cron.d/0hourly
+</span></span><span style="display:flex;"><span>etc/xattr.conf
+</span></span><span style="display:flex;"><span>etc/selinux/
+</span></span><span style="display:flex;"><span>etc/selinux/semanage.conf
+</span></span><span style="display:flex;"><span>etc/selinux/config
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/.policy.sha512
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/booleans.subs_dist
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/customizable_types
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/dbus_contexts
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/default_contexts
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/default_type
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/failsafe_context
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/files/
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/files/file_contexts
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/files/file_contexts.homedirs
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/files/file_contexts.local
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/files/file_contexts.subs
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/files/file_contexts.subs_dist
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/files/media
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/files/file_contexts.bin
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/files/file_contexts.homedirs.bin
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/initrc_context
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/lxc_contexts
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/openssh_contexts
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/removable_context
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/securetty_types
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/sepgsql_contexts
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/snapperd_contexts
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/systemd_contexts
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/userhelper_context
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/users/
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/users/guest_u
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/users/root
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/users/staff_u
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/users/sysadm_u
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/users/unconfined_u
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/users/user_u
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/users/xguest_u
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/virtual_domain_context
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/virtual_image_context
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/contexts/x_contexts
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/logins/
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/policy/
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/policy/policy.33
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/setrans.conf
+</span></span><span style="display:flex;"><span>etc/selinux/targeted/seusers
+</span></span><span style="display:flex;"><span>etc/default/
+</span></span><span style="display:flex;"><span>etc/default/useradd
+</span></span><span style="display:flex;"><span>etc/default/grub
+</span></span><span style="display:flex;"><span>etc/cron.deny
+</span></span><span style="display:flex;"><span>etc/login.defs
+</span></span><span style="display:flex;"><span>etc/cron.daily/
+</span></span><span style="display:flex;"><span>etc/magic
+</span></span><span style="display:flex;"><span>etc/sgml/
+</span></span><span style="display:flex;"><span>etc/sgml/docbook/
+</span></span><span style="display:flex;"><span>etc/sgml/docbook/xmlcatalog
+</span></span><span style="display:flex;"><span>etc/xml/
+</span></span><span style="display:flex;"><span>etc/xml/catalog
+</span></span><span style="display:flex;"><span>etc/xml/mallard/
+</span></span><span style="display:flex;"><span>etc/xml/mallard/catalog
+</span></span><span style="display:flex;"><span>etc/glvnd/
+</span></span><span style="display:flex;"><span>etc/glvnd/egl_vendor.d/
+</span></span><span style="display:flex;"><span>etc/groff/
+</span></span><span style="display:flex;"><span>etc/groff/site-font/
+</span></span><span style="display:flex;"><span>etc/groff/site-tmac/
+</span></span><span style="display:flex;"><span>etc/groff/site-tmac/man.local
+</span></span><span style="display:flex;"><span>etc/groff/site-tmac/mdoc.local
+</span></span><span style="display:flex;"><span>etc/egl/
+</span></span><span style="display:flex;"><span>etc/egl/egl_external_platform.d/
+</span></span><span style="display:flex;"><span>etc/cron.weekly/
+</span></span><span style="display:flex;"><span>etc/GREP_COLORS
+</span></span><span style="display:flex;"><span>etc/vulkan/
+</span></span><span style="display:flex;"><span>etc/vulkan/explicit_layer.d/
+</span></span><span style="display:flex;"><span>etc/vulkan/icd.d/
+</span></span><span style="display:flex;"><span>etc/vulkan/implicit_layer.d/
+</span></span><span style="display:flex;"><span>etc/.pwd.lock
+</span></span><span style="display:flex;"><span>etc/ssh/
+</span></span><span style="display:flex;"><span>etc/ssh/moduli
+</span></span><span style="display:flex;"><span>etc/ssh/ssh_config
+</span></span><span style="display:flex;"><span>etc/ssh/ssh_config.d/
+</span></span><span style="display:flex;"><span>etc/ssh/ssh_config.d/50-redhat.conf
+</span></span><span style="display:flex;"><span>etc/ssh/sshd_config
+</span></span><span style="display:flex;"><span>etc/ssh/sshd_config.d/
+</span></span><span style="display:flex;"><span>etc/ssh/sshd_config.d/50-redhat.conf
+</span></span><span style="display:flex;"><span>etc/ssh/ssh_host_ed25519_key
+</span></span><span style="display:flex;"><span>etc/ssh/ssh_host_ed25519_key.pub
+</span></span><span style="display:flex;"><span>etc/ssh/ssh_host_ecdsa_key
+</span></span><span style="display:flex;"><span>etc/ssh/ssh_host_ecdsa_key.pub
+</span></span><span style="display:flex;"><span>etc/ssh/ssh_host_rsa_key
+</span></span><span style="display:flex;"><span>etc/ssh/ssh_host_rsa_key.pub
+</span></span><span style="display:flex;"><span>etc/gdm/
+</span></span><span style="display:flex;"><span>etc/gdm/Init/
+</span></span><span style="display:flex;"><span>etc/gdm/Init/Default
+</span></span><span style="display:flex;"><span>etc/gdm/PostLogin/
+</span></span><span style="display:flex;"><span>etc/gdm/PostLogin/Default.sample
+</span></span><span style="display:flex;"><span>etc/gdm/PostSession/
+</span></span><span style="display:flex;"><span>etc/gdm/PostSession/Default
+</span></span><span style="display:flex;"><span>etc/gdm/PreSession/
+</span></span><span style="display:flex;"><span>etc/gdm/PreSession/Default
+</span></span><span style="display:flex;"><span>etc/gdm/Xsession
+</span></span><span style="display:flex;"><span>etc/gdm/custom.conf
+</span></span><span style="display:flex;"><span>etc/papersize
+</span></span><span style="display:flex;"><span>etc/crontab
+</span></span><span style="display:flex;"><span>etc/vimrc
+</span></span><span style="display:flex;"><span>etc/iproute2/
+</span></span><span style="display:flex;"><span>etc/iproute2/bpf_pinning
+</span></span><span style="display:flex;"><span>etc/iproute2/ematch_map
+</span></span><span style="display:flex;"><span>etc/iproute2/group
+</span></span><span style="display:flex;"><span>etc/iproute2/nl_protos
+</span></span><span style="display:flex;"><span>etc/iproute2/rt_dsfield
+</span></span><span style="display:flex;"><span>etc/iproute2/rt_protos
+</span></span><span style="display:flex;"><span>etc/iproute2/rt_realms
+</span></span><span style="display:flex;"><span>etc/iproute2/rt_scopes
+</span></span><span style="display:flex;"><span>etc/iproute2/rt_tables
+</span></span><span style="display:flex;"><span>etc/nftables/
+</span></span><span style="display:flex;"><span>etc/nftables/main.nft
+</span></span><span style="display:flex;"><span>etc/nftables/nat.nft
+</span></span><span style="display:flex;"><span>etc/nftables/osf/
+</span></span><span style="display:flex;"><span>etc/nftables/osf/pf.os
+</span></span><span style="display:flex;"><span>etc/nftables/router.nft
+</span></span><span style="display:flex;"><span>etc/pkgconfig/
+</span></span><span style="display:flex;"><span>etc/pkgconfig/personality.d/
+</span></span><span style="display:flex;"><span>etc/libssh/
+</span></span><span style="display:flex;"><span>etc/libssh/libssh_client.config
+</span></span><span style="display:flex;"><span>etc/libssh/libssh_server.config
+</span></span><span style="display:flex;"><span>etc/iscsi/
+</span></span><span style="display:flex;"><span>etc/iscsi/iscsid.conf
+</span></span><span style="display:flex;"><span>etc/DIR_COLORS
+</span></span><span style="display:flex;"><span>etc/sasl2/
+</span></span><span style="display:flex;"><span>etc/libblockdev/
+</span></span><span style="display:flex;"><span>etc/libblockdev/conf.d/
+</span></span><span style="display:flex;"><span>etc/libblockdev/conf.d/00-default.cfg
+</span></span><span style="display:flex;"><span>etc/DIR_COLORS.lightbgcolor
+</span></span><span style="display:flex;"><span>etc/ssl/
+</span></span><span style="display:flex;"><span>etc/ssl/cert.pem
+</span></span><span style="display:flex;"><span>etc/ssl/certs
+</span></span><span style="display:flex;"><span>etc/ssl/ct_log_list.cnf
+</span></span><span style="display:flex;"><span>etc/ssl/openssl.cnf
+</span></span><span style="display:flex;"><span>etc/multipath/
+</span></span><span style="display:flex;"><span>etc/nsswitch.conf.bak
+</span></span><span style="display:flex;"><span>etc/nsswitch.conf
+</span></span><span style="display:flex;"><span>etc/gss/
+</span></span><span style="display:flex;"><span>etc/gss/mech.d/
+</span></span><span style="display:flex;"><span>etc/audit/
+</span></span><span style="display:flex;"><span>etc/audit/audit-stop.rules
+</span></span><span style="display:flex;"><span>etc/audit/auditd.conf
+</span></span><span style="display:flex;"><span>etc/audit/plugins.d/
+</span></span><span style="display:flex;"><span>etc/audit/plugins.d/af_unix.conf
+</span></span><span style="display:flex;"><span>etc/audit/plugins.d/sedispatch.conf
+</span></span><span style="display:flex;"><span>etc/audit/rules.d/
+</span></span><span style="display:flex;"><span>etc/audit/rules.d/audit.rules
+</span></span><span style="display:flex;"><span>etc/audit/audit.rules
+</span></span><span style="display:flex;"><span>etc/krb5.conf
+</span></span><span style="display:flex;"><span>etc/krb5.conf.d/
+</span></span><span style="display:flex;"><span>etc/krb5.conf.d/crypto-policies
+</span></span><span style="display:flex;"><span>etc/krb5.conf.d/enable_sssd_conf_dir
+</span></span><span style="display:flex;"><span>etc/krb5.conf.d/kcm_default_ccache
+</span></span><span style="display:flex;"><span>etc/pulse/
+</span></span><span style="display:flex;"><span>etc/pulse/client.conf
+</span></span><span style="display:flex;"><span>etc/depmod.d/
+</span></span><span style="display:flex;"><span>etc/depmod.d/dist.conf
+</span></span><span style="display:flex;"><span>etc/depmod.d/kvdo.conf
+</span></span><span style="display:flex;"><span>etc/modprobe.d/
+</span></span><span style="display:flex;"><span>etc/modprobe.d/firewalld-sysctls.conf
+</span></span><span style="display:flex;"><span>etc/modprobe.d/tuned.conf
+</span></span><span style="display:flex;"><span>etc/rsyslog.conf
+</span></span><span style="display:flex;"><span>etc/netconfig
+</span></span><span style="display:flex;"><span>etc/favicon.png
+</span></span><span style="display:flex;"><span>etc/wireplumber/
+</span></span><span style="display:flex;"><span>etc/wireplumber/bluetooth.lua.d/
+</span></span><span style="display:flex;"><span>etc/wireplumber/common/
+</span></span><span style="display:flex;"><span>etc/wireplumber/main.lua.d/
+</span></span><span style="display:flex;"><span>etc/wireplumber/policy.lua.d/
+</span></span><span style="display:flex;"><span>etc/authselect/
+</span></span><span style="display:flex;"><span>etc/authselect/custom/
+</span></span><span style="display:flex;"><span>etc/authselect/user-nsswitch.conf
+</span></span><span style="display:flex;"><span>etc/authselect/system-auth
+</span></span><span style="display:flex;"><span>etc/authselect/password-auth
+</span></span><span style="display:flex;"><span>etc/authselect/fingerprint-auth
+</span></span><span style="display:flex;"><span>etc/authselect/smartcard-auth
+</span></span><span style="display:flex;"><span>etc/authselect/postlogin
+</span></span><span style="display:flex;"><span>etc/authselect/nsswitch.conf
+</span></span><span style="display:flex;"><span>etc/authselect/dconf-db
+</span></span><span style="display:flex;"><span>etc/authselect/dconf-locks
+</span></span><span style="display:flex;"><span>etc/authselect/authselect.conf
+</span></span><span style="display:flex;"><span>etc/usb_modeswitch.conf
+</span></span><span style="display:flex;"><span>etc/wpa_supplicant/
+</span></span><span style="display:flex;"><span>etc/wpa_supplicant/wpa_supplicant.conf
+</span></span><span style="display:flex;"><span>etc/binfmt.d/
+</span></span><span style="display:flex;"><span>etc/kernel/
+</span></span><span style="display:flex;"><span>etc/kernel/install.d/
+</span></span><span style="display:flex;"><span>etc/kernel/cmdline
+</span></span><span style="display:flex;"><span>etc/modules-load.d/
+</span></span><span style="display:flex;"><span>etc/sysctl.conf
+</span></span><span style="display:flex;"><span>etc/sysctl.d/
+</span></span><span style="display:flex;"><span>etc/sysctl.d/99-sysctl.conf
+</span></span><span style="display:flex;"><span>etc/NetworkManager/
+</span></span><span style="display:flex;"><span>etc/NetworkManager/NetworkManager.conf
+</span></span><span style="display:flex;"><span>etc/NetworkManager/conf.d/
+</span></span><span style="display:flex;"><span>etc/NetworkManager/dispatcher.d/
+</span></span><span style="display:flex;"><span>etc/NetworkManager/dispatcher.d/no-wait.d/
+</span></span><span style="display:flex;"><span>etc/NetworkManager/dispatcher.d/pre-down.d/
+</span></span><span style="display:flex;"><span>etc/NetworkManager/dispatcher.d/pre-up.d/
+</span></span><span style="display:flex;"><span>etc/NetworkManager/dnsmasq-shared.d/
+</span></span><span style="display:flex;"><span>etc/NetworkManager/dnsmasq.d/
+</span></span><span style="display:flex;"><span>etc/NetworkManager/system-connections/
+</span></span><span style="display:flex;"><span>etc/NetworkManager/system-connections/ens18.nmconnection
+</span></span><span style="display:flex;"><span>etc/UPower/
+</span></span><span style="display:flex;"><span>etc/UPower/UPower.conf
+</span></span><span style="display:flex;"><span>etc/cifs-utils/
+</span></span><span style="display:flex;"><span>etc/cifs-utils/idmap-plugin
+</span></span><span style="display:flex;"><span>etc/sudo-ldap.conf
+</span></span><span style="display:flex;"><span>etc/sudo.conf
+</span></span><span style="display:flex;"><span>etc/sudoers
+</span></span><span style="display:flex;"><span>etc/sudoers.d/
+</span></span><span style="display:flex;"><span>etc/geoclue/
+</span></span><span style="display:flex;"><span>etc/geoclue/geoclue.conf
+</span></span><span style="display:flex;"><span>etc/PackageKit/
+</span></span><span style="display:flex;"><span>etc/PackageKit/PackageKit.conf
+</span></span><span style="display:flex;"><span>etc/PackageKit/Vendor.conf
+</span></span><span style="display:flex;"><span>etc/PackageKit/CommandNotFound.conf
+</span></span><span style="display:flex;"><span>etc/speech-dispatcher/
+</span></span><span style="display:flex;"><span>etc/speech-dispatcher/modules/
+</span></span><span style="display:flex;"><span>etc/speech-dispatcher/modules/espeak-ng.conf
+</span></span><span style="display:flex;"><span>etc/speech-dispatcher/modules/cicero.conf
+</span></span><span style="display:flex;"><span>etc/speech-dispatcher/modules/dtk-generic.conf
+</span></span><span style="display:flex;"><span>etc/speech-dispatcher/modules/epos-generic.conf
+</span></span><span style="display:flex;"><span>etc/speech-dispatcher/modules/ivona.conf
+</span></span><span style="display:flex;"><span>etc/speech-dispatcher/modules/llia_phon-generic.conf
+</span></span><span style="display:flex;"><span>etc/speech-dispatcher/modules/mary-generic-disabled.conf
+</span></span><span style="display:flex;"><span>etc/speech-dispatcher/modules/swift-generic.conf
+</span></span><span style="display:flex;"><span>etc/speech-dispatcher/clients/
+</span></span><span style="display:flex;"><span>etc/speech-dispatcher/clients/emacs.conf
+</span></span><span style="display:flex;"><span>etc/speech-dispatcher/speechd.conf
+</span></span><span style="display:flex;"><span>etc/mke2fs.conf
+</span></span><span style="display:flex;"><span>etc/trusted-key.key
+</span></span><span style="display:flex;"><span>etc/dracut.conf
+</span></span><span style="display:flex;"><span>etc/dracut.conf.d/
+</span></span><span style="display:flex;"><span>etc/plymouth/
+</span></span><span style="display:flex;"><span>etc/plymouth/plymouthd.conf
+</span></span><span style="display:flex;"><span>etc/kdump/
+</span></span><span style="display:flex;"><span>etc/kdump/post.d/
+</span></span><span style="display:flex;"><span>etc/kdump/pre.d/
+</span></span><span style="display:flex;"><span>etc/kdump.conf
+</span></span><span style="display:flex;"><span>etc/makedumpfile.conf.sample
+</span></span><span style="display:flex;"><span>etc/cockpit/
+</span></span><span style="display:flex;"><span>etc/cockpit/machines.d/
+</span></span><span style="display:flex;"><span>etc/cockpit/ws-certs.d/
+</span></span><span style="display:flex;"><span>etc/cockpit/disallowed-users
+</span></span><span style="display:flex;"><span>etc/flatpak/
+</span></span><span style="display:flex;"><span>etc/flatpak/remotes.d/
+</span></span><span style="display:flex;"><span>etc/setroubleshoot/
+</span></span><span style="display:flex;"><span>etc/setroubleshoot/setroubleshoot.conf
+</span></span><span style="display:flex;"><span>etc/fprintd.conf
+</span></span><span style="display:flex;"><span>etc/udisks2/
+</span></span><span style="display:flex;"><span>etc/udisks2/mount_options.conf.example
+</span></span><span style="display:flex;"><span>etc/udisks2/udisks2.conf
+</span></span><span style="display:flex;"><span>etc/fwupd/
+</span></span><span style="display:flex;"><span>etc/fwupd/bios-settings.d/
+</span></span><span style="display:flex;"><span>etc/fwupd/bios-settings.d/README.md
+</span></span><span style="display:flex;"><span>etc/fwupd/daemon.conf
+</span></span><span style="display:flex;"><span>etc/fwupd/msr.conf
+</span></span><span style="display:flex;"><span>etc/fwupd/redfish.conf
+</span></span><span style="display:flex;"><span>etc/fwupd/remotes.d/
+</span></span><span style="display:flex;"><span>etc/fwupd/remotes.d/dell-esrt.conf
+</span></span><span style="display:flex;"><span>etc/fwupd/remotes.d/lvfs-testing.conf
+</span></span><span style="display:flex;"><span>etc/fwupd/remotes.d/lvfs.conf
+</span></span><span style="display:flex;"><span>etc/fwupd/remotes.d/vendor-directory.conf
+</span></span><span style="display:flex;"><span>etc/fwupd/remotes.d/vendor.conf
+</span></span><span style="display:flex;"><span>etc/fwupd/thunderbolt.conf
+</span></span><span style="display:flex;"><span>etc/fwupd/uefi_capsule.conf
+</span></span><span style="display:flex;"><span>etc/insights-client/
+</span></span><span style="display:flex;"><span>etc/insights-client/.exp.sed
+</span></span><span style="display:flex;"><span>etc/insights-client/.fallback.json
+</span></span><span style="display:flex;"><span>etc/insights-client/.fallback.json.asc
+</span></span><span style="display:flex;"><span>etc/insights-client/cert-api.access.redhat.com.pem
+</span></span><span style="display:flex;"><span>etc/insights-client/insights-client.conf
+</span></span><span style="display:flex;"><span>etc/insights-client/insights-client.motd
+</span></span><span style="display:flex;"><span>etc/insights-client/redhattools.pub.gpg
+</span></span><span style="display:flex;"><span>etc/insights-client/rpm.egg
+</span></span><span style="display:flex;"><span>etc/insights-client/rpm.egg.asc
+</span></span><span style="display:flex;"><span>etc/containers/
+</span></span><span style="display:flex;"><span>etc/containers/certs.d/
+</span></span><span style="display:flex;"><span>etc/containers/oci/
+</span></span><span style="display:flex;"><span>etc/containers/oci/hooks.d/
+</span></span><span style="display:flex;"><span>etc/containers/policy.json
+</span></span><span style="display:flex;"><span>etc/containers/registries.conf
+</span></span><span style="display:flex;"><span>etc/containers/registries.conf.d/
+</span></span><span style="display:flex;"><span>etc/containers/registries.conf.d/000-shortnames.conf
+</span></span><span style="display:flex;"><span>etc/containers/registries.conf.d/001-rhel-shortnames.conf
+</span></span><span style="display:flex;"><span>etc/containers/registries.conf.d/002-rhel-shortnames-overrides.conf
+</span></span><span style="display:flex;"><span>etc/containers/registries.d/
+</span></span><span style="display:flex;"><span>etc/containers/registries.d/default.yaml
+</span></span><span style="display:flex;"><span>etc/containers/registries.d/registry.access.redhat.com.yaml
+</span></span><span style="display:flex;"><span>etc/containers/registries.d/registry.redhat.io.yaml
+</span></span><span style="display:flex;"><span>etc/containers/storage.conf
+</span></span><span style="display:flex;"><span>etc/containers/systemd/
+</span></span><span style="display:flex;"><span>etc/brlapi.key
+</span></span><span style="display:flex;"><span>etc/brltty/
+</span></span><span style="display:flex;"><span>etc/brltty/Attributes/
+</span></span><span style="display:flex;"><span>etc/brltty/Attributes/invleft_right.atb
+</span></span><span style="display:flex;"><span>etc/brltty/Attributes/left_right.atb
+</span></span><span style="display:flex;"><span>etc/brltty/Attributes/upper_lower.atb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/af.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/am.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/countries.cti
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/de-1998.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/de-2015.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/de-g0.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/de-g1.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/de-g2.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/de-wort.cti
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/en-ueb-g2.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/en-us-g2.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/es.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/fr-g1.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/fr-g2.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/ha.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/id.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/ipa.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/ja.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/ko-g1.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/ko-g2.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/ko.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/latex-access.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/letters-latin.cti
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/lt.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/mg.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/mun.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/nabcc.cti
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/nl.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/ny.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/pt.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/si.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/spaces.cti
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/sw.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/th.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/zh-tw.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/zh-tw.cti
+</span></span><span style="display:flex;"><span>etc/brltty/Contraction/zu.ctb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/al/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/al/abt_basic.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/al/abt_extra.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/al/abt_large.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/al/abt_small.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/al/bc-etouch.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/al/bc-smartpad.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/al/bc-thumb.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/al/bc.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/al/bc640.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/al/bc680.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/al/el.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/al/sat_common.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/al/sat_large.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/al/sat_nav.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/al/sat_small.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/al/sat_speech.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/al/sat_tumblers.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/al/voyager.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/android-chords.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/at/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/at/all.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ba/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ba/all.txt
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bd/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bd/all.txt
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bg/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bg/all.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bl/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bl/18.txt
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bl/40_m20_m40.txt
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/b2g.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/b9b10.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/b9b11b10.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/command.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/connect.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/conny.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/d6.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/default.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/display6.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/display7.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/dm80p.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/front10.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/front6.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/horizontal.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/inka.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/keyboard.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/orbit.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/pro.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/pronto.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/pv.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/rb.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/routing.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/routing6.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/routing7.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/status.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/sv.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/ultra.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/v40.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/v80.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/vertical.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/vk.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bm/wheels.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bn/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bn/all.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bn/input.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bp/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/bp/all.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/cb/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/cb/all.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ce/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ce/all.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ce/novem.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/chords.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/cn/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/cn/all.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ec/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ec/all.txt
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ec/spanish.txt
+</span></span><span style="display:flex;"><span>etc/brltty/Input/eu/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/eu/all.txt
+</span></span><span style="display:flex;"><span>etc/brltty/Input/eu/braille.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/eu/clio.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/eu/common.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/eu/esys_large.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/eu/esys_medium.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/eu/esys_small.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/eu/esytime.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/eu/iris.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/eu/joysticks.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/eu/routing.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/eu/sw12.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/eu/sw34.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/eu/sw56.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/fa/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/fa/all.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/fs/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/fs/bumpers.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/fs/common.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/fs/focus.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/fs/focus1.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/fs/focus14.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/fs/focus40.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/fs/focus80.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/fs/pacmate.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/fs/rockers.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hd/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hd/mbl.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hd/pfl.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hm/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hm/beetle.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hm/braille.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hm/common.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hm/contexts.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hm/edge.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hm/f14.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hm/f18.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hm/fnkey.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hm/left.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hm/letters.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hm/pan.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hm/pan.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hm/qwerty.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hm/qwerty.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hm/right.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hm/scroll.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hm/scroll.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hm/sync.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/ab.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/ac4.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/alo.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/as40.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/bb.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/bbp.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/bkwm.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/brln.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/bs.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/bs40.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/bs80.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/cb40.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/dots.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/easy.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/input.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/joystick.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/keypad.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/mc88.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/mdlr.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/me.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/me64.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/me88.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/rockers.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ht/wave.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hw/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hw/B80.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hw/BI14.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hw/BI32.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hw/BI40.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hw/C20.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hw/M40.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hw/NLS.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hw/braille.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hw/command.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hw/joystick.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hw/one.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hw/routing.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hw/thumb.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/hw/touch.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ic/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ic/bb.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ic/chords.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ic/common.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ic/nvda.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ic/route.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ic/toggle.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ir/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ir/all.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ir/brl.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ir/pc.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/lb/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/lb/all.txt
+</span></span><span style="display:flex;"><span>etc/brltty/Input/lt/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/lt/all.txt
+</span></span><span style="display:flex;"><span>etc/brltty/Input/mb/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/mb/all.txt
+</span></span><span style="display:flex;"><span>etc/brltty/Input/md/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/md/common.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/md/default.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/md/fk.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/md/fk_s.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/md/fkeys.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/md/kbd.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/md/keyboard.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/md/status.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/menu.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/mm/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/mm/common.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/mm/pocket.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/mm/smart.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/mn/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/mn/all.txt
+</span></span><span style="display:flex;"><span>etc/brltty/Input/mt/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/mt/bd1_3.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/mt/bd1_3.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/mt/bd1_3s.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/mt/bd1_6.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/mt/bd1_6.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/mt/bd1_6s.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/mt/bd2.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/mt/status.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/no/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/no/all.txt
+</span></span><span style="display:flex;"><span>etc/brltty/Input/np/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/np/all.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pg/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pg/all.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/2d_l.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/2d_s.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/bar.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/c.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/c_486.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/el2d_80s.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/el40c.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/el40s.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/el60c.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/el66s.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/el70s.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/el80_ii.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/el80c.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/el80s.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/el_2d_40.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/el_2d_66.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/el_2d_80.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/el_40_p.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/el_80.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/elb_tr_20.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/elb_tr_32.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/elba_20.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/elba_32.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/front13.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/front9.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/ib_80.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/keyboard.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/keys.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/live.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/routing.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/status0.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/status13.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/status2.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/status20.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/status22.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/status4.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/switches.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/pm/trio.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/sk/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/sk/bdp.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/sk/ntk.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/tn/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/tn/all.txt
+</span></span><span style="display:flex;"><span>etc/brltty/Input/toggle.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ts/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ts/nav.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ts/nav20.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ts/nav40.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ts/nav80.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ts/nav_large.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ts/nav_small.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ts/pb.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ts/pb40.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ts/pb65.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ts/pb80.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ts/pb_large.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ts/pb_small.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/ts/routing.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/tt/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/tt/all.txt
+</span></span><span style="display:flex;"><span>etc/brltty/Input/vd/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/vd/all.txt
+</span></span><span style="display:flex;"><span>etc/brltty/Input/vo/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/vo/all.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/vo/all.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Input/vo/bp.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Input/vr/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/vr/all.txt
+</span></span><span style="display:flex;"><span>etc/brltty/Input/vs/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/vs/all.txt
+</span></span><span style="display:flex;"><span>etc/brltty/Input/xw/
+</span></span><span style="display:flex;"><span>etc/brltty/Input/xw/all.txt
+</span></span><span style="display:flex;"><span>etc/brltty/Keyboard/
+</span></span><span style="display:flex;"><span>etc/brltty/Keyboard/braille.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Keyboard/braille.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Keyboard/desktop.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Keyboard/desktop.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Keyboard/keypad.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Keyboard/kp_say.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Keyboard/kp_speak.kti
+</span></span><span style="display:flex;"><span>etc/brltty/Keyboard/laptop.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Keyboard/sun_type6.ktb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/
+</span></span><span style="display:flex;"><span>etc/brltty/Text/no-generic.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/alias.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/no-oup.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/ar.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/no.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/as.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/kru.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/ascii-basic.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/num-alias.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/awa.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/num-dot6.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/bengali.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/num-dot8.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/bg.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/num-french.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/bh.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/num-nemd8.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/blocks.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/num-nemeth.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/bn.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/nwc.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/bo.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/or.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/boxes.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/oriya.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/bra.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/pa.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/brf.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/pi.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/common.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/pl.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/cs.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/kok.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/ctl-latin.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/pt.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/cy.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/punc-alternate.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/da-1252.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/punc-basic.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/da-lt.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/punc-tibetan.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/da.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/mi.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/de-chess.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/ro.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/de.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/mg.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/devanagari.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/ru.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/dra.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/sa.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/el.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/ml.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/en-chess.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/mni.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/en-na-ascii.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/mr.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/en-nabcc.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/sat.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/en.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/sd.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/en_CA.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/se.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/en_GB.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/sk.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/en_US.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/sl.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/eo.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/sv-1989.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/es.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/sv-1996.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/et.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/sv.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/fi.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/sw.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/fr-2007.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/mt.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/fr-cbifs.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/ta.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/fr-vs.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/tamil.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/fr.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/te.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/fr_CA.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/telugu.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/fr_FR.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/tr.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/ga.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/uk.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/gd.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/vi.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/gon.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/win-1252.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/greek.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/gu.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/mun.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/gujarati.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/mwr.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/gurmukhi.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/he.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/hi.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/hr.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/hu.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/hy.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/is.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/it.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/kannada.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/kha.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/kn.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/lt.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/ne.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/ltr-alias.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/new.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/ltr-cyrillic.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/nl.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/ltr-dot8.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/ltr-latin.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/nl_BE.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/ltr-tibetan.tti
+</span></span><span style="display:flex;"><span>etc/brltty/Text/lv.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/nl_NL.ttb
+</span></span><span style="display:flex;"><span>etc/brltty/Text/malayalam.tti
+</span></span><span style="display:flex;"><span>etc/brltty.conf
+</span></span><span style="display:flex;"><span>etc/foomatic/
+</span></span><span style="display:flex;"><span>etc/foomatic/defaultspooler
+</span></span><span style="display:flex;"><span>etc/cupshelpers/
+</span></span><span style="display:flex;"><span>etc/cupshelpers/preferreddrivers.xml
+</span></span><span style="display:flex;"><span>etc/vmware-tools/
+</span></span><span style="display:flex;"><span>etc/vmware-tools/poweroff-vm-default
+</span></span><span style="display:flex;"><span>etc/vmware-tools/poweron-vm-default
+</span></span><span style="display:flex;"><span>etc/vmware-tools/resume-vm-default
+</span></span><span style="display:flex;"><span>etc/vmware-tools/scripts/
+</span></span><span style="display:flex;"><span>etc/vmware-tools/scripts/vmware/
+</span></span><span style="display:flex;"><span>etc/vmware-tools/scripts/vmware/network
+</span></span><span style="display:flex;"><span>etc/vmware-tools/statechange.subr
+</span></span><span style="display:flex;"><span>etc/vmware-tools/suspend-vm-default
+</span></span><span style="display:flex;"><span>etc/vmware-tools/tools.conf.example
+</span></span><span style="display:flex;"><span>etc/vmware-tools/vgauth/
+</span></span><span style="display:flex;"><span>etc/vmware-tools/vgauth/schemas/
+</span></span><span style="display:flex;"><span>etc/vmware-tools/vgauth/schemas/XMLSchema-hasFacetAndProperty.xsd
+</span></span><span style="display:flex;"><span>etc/vmware-tools/vgauth/schemas/XMLSchema-instance.xsd
+</span></span><span style="display:flex;"><span>etc/vmware-tools/vgauth/schemas/XMLSchema.dtd
+</span></span><span style="display:flex;"><span>etc/vmware-tools/vgauth/schemas/XMLSchema.xsd
+</span></span><span style="display:flex;"><span>etc/vmware-tools/vgauth/schemas/catalog.xml
+</span></span><span style="display:flex;"><span>etc/vmware-tools/vgauth/schemas/datatypes.dtd
+</span></span><span style="display:flex;"><span>etc/vmware-tools/vgauth/schemas/saml-schema-assertion-2.0.xsd
+</span></span><span style="display:flex;"><span>etc/vmware-tools/vgauth/schemas/xenc-schema.xsd
+</span></span><span style="display:flex;"><span>etc/vmware-tools/vgauth/schemas/xml.xsd
+</span></span><span style="display:flex;"><span>etc/vmware-tools/vgauth/schemas/xmldsig-core-schema.xsd
+</span></span><span style="display:flex;"><span>etc/vmware-tools/vgauth.conf
+</span></span><span style="display:flex;"><span>etc/chromium/
+</span></span><span style="display:flex;"><span>etc/chromium/native-messaging-hosts/
+</span></span><span style="display:flex;"><span>etc/chromium/native-messaging-hosts/org.gnome.browser_connector.json
+</span></span><span style="display:flex;"><span>etc/chromium/native-messaging-hosts/org.gnome.chrome_gnome_shell.json
+</span></span><span style="display:flex;"><span>etc/nvme/
+</span></span><span style="display:flex;"><span>etc/nvme/discovery.conf
+</span></span><span style="display:flex;"><span>etc/nvme/hostnqn
+</span></span><span style="display:flex;"><span>etc/nvme/hostid
+</span></span><span style="display:flex;"><span>etc/firefox/
+</span></span><span style="display:flex;"><span>etc/firefox/pref/
+</span></span><span style="display:flex;"><span>etc/ras/
+</span></span><span style="display:flex;"><span>etc/ras/dimm_labels.d/
+</span></span><span style="display:flex;"><span>etc/pbm2ppa.conf
+</span></span><span style="display:flex;"><span>etc/pnm2ppa.conf
+</span></span><span style="display:flex;"><span>etc/enscript.cfg
+</span></span><span style="display:flex;"><span>etc/firewalld/
+</span></span><span style="display:flex;"><span>etc/firewalld/firewalld.conf
+</span></span><span style="display:flex;"><span>etc/firewalld/helpers/
+</span></span><span style="display:flex;"><span>etc/firewalld/icmptypes/
+</span></span><span style="display:flex;"><span>etc/firewalld/ipsets/
+</span></span><span style="display:flex;"><span>etc/firewalld/lockdown-whitelist.xml
+</span></span><span style="display:flex;"><span>etc/firewalld/policies/
+</span></span><span style="display:flex;"><span>etc/firewalld/services/
+</span></span><span style="display:flex;"><span>etc/firewalld/zones/
+</span></span><span style="display:flex;"><span>etc/firewalld/zones/public.xml
+</span></span><span style="display:flex;"><span>etc/firewalld/zones/public.xml.old
+</span></span><span style="display:flex;"><span>etc/tuned/
+</span></span><span style="display:flex;"><span>etc/tuned/active_profile
+</span></span><span style="display:flex;"><span>etc/tuned/bootcmdline
+</span></span><span style="display:flex;"><span>etc/tuned/post_loaded_profile
+</span></span><span style="display:flex;"><span>etc/tuned/profile_mode
+</span></span><span style="display:flex;"><span>etc/tuned/recommend.d/
+</span></span><span style="display:flex;"><span>etc/tuned/tuned-main.conf
+</span></span><span style="display:flex;"><span>etc/rhc/
+</span></span><span style="display:flex;"><span>etc/rhc/workers/
+</span></span><span style="display:flex;"><span>etc/rhc/workers/rhc-package-manager.toml
+</span></span><span style="display:flex;"><span>etc/rhc/config.toml
+</span></span><span style="display:flex;"><span>etc/yum/
+</span></span><span style="display:flex;"><span>etc/yum/pluginconf.d
+</span></span><span style="display:flex;"><span>etc/yum/protected.d
+</span></span><span style="display:flex;"><span>etc/yum/vars
+</span></span><span style="display:flex;"><span>etc/yum.conf
+</span></span><span style="display:flex;"><span>etc/grub2.cfg
+</span></span><span style="display:flex;"><span>etc/pinforc
+</span></span><span style="display:flex;"><span>etc/alsa/
+</span></span><span style="display:flex;"><span>etc/alsa/conf.d/
+</span></span><span style="display:flex;"><span>etc/alsa/conf.d/50-pipewire.conf
+</span></span><span style="display:flex;"><span>etc/alsa/conf.d/99-pipewire-default.conf
+</span></span><span style="display:flex;"><span>etc/alsa/state-daemon.conf
+</span></span><span style="display:flex;"><span>etc/alsa/alsactl.conf
+</span></span><span style="display:flex;"><span>etc/at.deny
+</span></span><span style="display:flex;"><span>etc/dhcp/
+</span></span><span style="display:flex;"><span>etc/dhcp/dhclient.d/
+</span></span><span style="display:flex;"><span>etc/dhcp/dhclient.d/chrony.sh
+</span></span><span style="display:flex;"><span>etc/chrony.conf
+</span></span><span style="display:flex;"><span>etc/chrony.keys
+</span></span><span style="display:flex;"><span>etc/mcelog/
+</span></span><span style="display:flex;"><span>etc/mcelog/mcelog.conf
+</span></span><span style="display:flex;"><span>etc/mcelog/triggers/
+</span></span><span style="display:flex;"><span>etc/mcelog/triggers/cache-error-trigger
+</span></span><span style="display:flex;"><span>etc/mcelog/triggers/dimm-error-trigger
+</span></span><span style="display:flex;"><span>etc/mcelog/triggers/page-error-trigger
+</span></span><span style="display:flex;"><span>etc/mcelog/triggers/socket-memory-error-trigger
+</span></span><span style="display:flex;"><span>etc/microcode_ctl/
+</span></span><span style="display:flex;"><span>etc/microcode_ctl/ucode_with_caveats/
+</span></span><span style="display:flex;"><span>etc/updatedb.conf
+</span></span><span style="display:flex;"><span>etc/smartmontools/
+</span></span><span style="display:flex;"><span>etc/smartmontools/smartd.conf
+</span></span><span style="display:flex;"><span>etc/smartmontools/smartd_warning.d/
+</span></span><span style="display:flex;"><span>etc/smartmontools/smartd_warning.sh
+</span></span><span style="display:flex;"><span>etc/dnsmasq.conf
+</span></span><span style="display:flex;"><span>etc/dnsmasq.d/
+</span></span><span style="display:flex;"><span>etc/qemu-ga/
+</span></span><span style="display:flex;"><span>etc/qemu-ga/fsfreeze-hook
+</span></span><span style="display:flex;"><span>etc/qemu-ga/fsfreeze-hook.d/
+</span></span><span style="display:flex;"><span>etc/man_db.conf
+</span></span><span style="display:flex;"><span>etc/rsyncd.conf
+</span></span><span style="display:flex;"><span>etc/wgetrc
+</span></span><span style="display:flex;"><span>etc/nanorc
+</span></span><span style="display:flex;"><span>etc/virc
+</span></span><span style="display:flex;"><span>etc/mailcap
+</span></span><span style="display:flex;"><span>etc/mime.types
+</span></span><span style="display:flex;"><span>etc/localtime
+</span></span><span style="display:flex;"><span>etc/locale.conf
+</span></span><span style="display:flex;"><span>etc/vconsole.conf
+</span></span><span style="display:flex;"><span>etc/hostname
+</span></span><span style="display:flex;"><span>etc/.updated
+</span></span><span style="display:flex;"><span>etc/subuid-
+</span></span><span style="display:flex;"><span>etc/subgid-
+</span></span><span style="display:flex;"><span>etc/machine-info
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">[</span>student@rhel9-01 rhcsa<span style="color:#ff7b72;font-weight:bold">]</span>$
+</span></span></code></pre></div><h5 id="task2">
+  Task2
+  <a class="heading-link" href="#task2">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<p>Filter all usernames (in the first column) from /etc/passwd in alphabetical order and with no blank lines in the target file and write them to /var/tmp/users</p>
+<p>You got this wrong. The first is yours, the second is th better solution. It minimizes regular expressions, uses cut instead. May be easier moving forward. <code>grep -v '^$'</code> removes all empty lines.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#command</span>
+</span></span><span style="display:flex;"><span>grep -o <span style="color:#a5d6ff">&#39;^[^:]*&#39;</span> /etc/passwd | sort | uniq &gt; /var/tmp/users
+</span></span><span style="display:flex;"><span>cut -d : -f <span style="color:#a5d6ff">1</span> /etc/passwd | sort | grep -v <span style="color:#a5d6ff">&#39;^$&#39;</span> &gt; /var/tmp/users
+</span></span></code></pre></div><h6 id="output-1">
+  Output
+  <a class="heading-link" href="#output-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h6>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#output</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">[</span>student@rhel9-01 rhcsa<span style="color:#ff7b72;font-weight:bold">]</span>$ cat /var/tmp/users
+</span></span><span style="display:flex;"><span>adm
+</span></span><span style="display:flex;"><span>avahi
+</span></span><span style="display:flex;"><span>bin
+</span></span><span style="display:flex;"><span>chrony
+</span></span><span style="display:flex;"><span>clevis
+</span></span><span style="display:flex;"><span>cockpit-ws
+</span></span><span style="display:flex;"><span>cockpit-wsinstance
+</span></span><span style="display:flex;"><span>colord
+</span></span><span style="display:flex;"><span>daemon
+</span></span><span style="display:flex;"><span>dbus
+</span></span><span style="display:flex;"><span>dnsmasq
+</span></span><span style="display:flex;"><span>flatpak
+</span></span><span style="display:flex;"><span>ftp
+</span></span><span style="display:flex;"><span>games
+</span></span><span style="display:flex;"><span>gdm
+</span></span><span style="display:flex;"><span>geoclue
+</span></span><span style="display:flex;"><span>gnome-initial-setup
+</span></span><span style="display:flex;"><span>halt
+</span></span><span style="display:flex;"><span>libstoragemgmt
+</span></span><span style="display:flex;"><span>lp
+</span></span><span style="display:flex;"><span>mail
+</span></span><span style="display:flex;"><span>nobody
+</span></span><span style="display:flex;"><span>operator
+</span></span><span style="display:flex;"><span>pipewire
+</span></span><span style="display:flex;"><span>polkitd
+</span></span><span style="display:flex;"><span>root
+</span></span><span style="display:flex;"><span>rtkit
+</span></span><span style="display:flex;"><span>setroubleshoot
+</span></span><span style="display:flex;"><span>shutdown
+</span></span><span style="display:flex;"><span>sshd
+</span></span><span style="display:flex;"><span>sssd
+</span></span><span style="display:flex;"><span>student
+</span></span><span style="display:flex;"><span>sync
+</span></span><span style="display:flex;"><span>systemd-coredump
+</span></span><span style="display:flex;"><span>systemd-oom
+</span></span><span style="display:flex;"><span>tcpdump
+</span></span><span style="display:flex;"><span>tss
+</span></span></code></pre></div><h5 id="task3">
+  Task3
+  <a class="heading-link" href="#task3">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<p>Create a user with the name bob. Next, find all files that are owned by user bob and copy them to /root/userfiles</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#command</span>
+</span></span><span style="display:flex;"><span>sudo useradd bob
+</span></span><span style="display:flex;"><span>mkdir -p /root/userfiles
+</span></span><span style="display:flex;"><span>find / -user bob -type f -exec cp <span style="color:#ff7b72;font-weight:bold">{}</span> /root/userfiles <span style="color:#79c0ff">\;</span>
+</span></span></code></pre></div><h6 id="output-2">
+  Output
+  <a class="heading-link" href="#output-2">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h6>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#output</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">[</span>student@rhel9-01 rhcsa<span style="color:#ff7b72;font-weight:bold">]</span>$ sudo mkdir -p /root/userfiles
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">[</span>student@rhel9-01 rhcsa<span style="color:#ff7b72;font-weight:bold">]</span>$ sudo find / -user bob -type f -exec cp <span style="color:#ff7b72;font-weight:bold">{}</span> /root/userfiles <span style="color:#79c0ff">\;</span>
+</span></span><span style="display:flex;"><span>find: ‘/proc/4003/task/4003/fdinfo/6’: No such file or directory
+</span></span><span style="display:flex;"><span>find: ‘/proc/4003/fdinfo/5’: No such file or directory
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">[</span>student@rhel9-01 rhcsa<span style="color:#ff7b72;font-weight:bold">]</span>$ sudo ls -lah /root/userfiles
+</span></span><span style="display:flex;"><span>total 12K
+</span></span><span style="display:flex;"><span>drwxr-xr-x. <span style="color:#a5d6ff">2</span> root root  <span style="color:#a5d6ff">73</span> Apr  <span style="color:#a5d6ff">8</span> 09:39 .
+</span></span><span style="display:flex;"><span>dr-xr-x---. <span style="color:#a5d6ff">5</span> root root <span style="color:#a5d6ff">176</span> Apr  <span style="color:#a5d6ff">8</span> 09:39 ..
+</span></span><span style="display:flex;"><span>-rw-r--r--. <span style="color:#a5d6ff">1</span> root root  <span style="color:#a5d6ff">18</span> Apr  <span style="color:#a5d6ff">8</span> 09:39 .bash_logout
+</span></span><span style="display:flex;"><span>-rw-r--r--. <span style="color:#a5d6ff">1</span> root root <span style="color:#a5d6ff">141</span> Apr  <span style="color:#a5d6ff">8</span> 09:39 .bash_profile
+</span></span><span style="display:flex;"><span>-rw-r--r--. <span style="color:#a5d6ff">1</span> root root <span style="color:#a5d6ff">492</span> Apr  <span style="color:#a5d6ff">8</span> 09:39 .bashrc
+</span></span><span style="display:flex;"><span>-rw-r-----. <span style="color:#a5d6ff">1</span> root root   <span style="color:#a5d6ff">0</span> Apr  <span style="color:#a5d6ff">8</span> 09:39 bob
+</span></span></code></pre></div><h3 id="managing-software">
+  Managing Software
+  <a class="heading-link" href="#managing-software">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Slide 55</li>
+<li>During the exam you are on a air-gapped virtual machine.</li>
+<li>The RHEL DVD is mounted as a repository.</li>
+<li>This lab is able setting this up yourself.</li>
+<li>You use <code>dnf</code> or <code>yum</code> for installing packages</li>
+<li>All installed packages get installed in the RPM database along with dependencies</li>
+<li>A repo is a collection of indexed RPM packages</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#commands</span>
+</span></span></code></pre></div><h6 id="output-3">
+  Output
+  <a class="heading-link" href="#output-3">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h6>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#output</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">[</span>root@localhost /<span style="color:#ff7b72;font-weight:bold">]</span><span style="color:#8b949e;font-style:italic"># dd if=/dev/sr0 of=/rhel9.iso bs=4M status=progress</span>
+</span></span><span style="display:flex;"><span><span style="color:#a5d6ff">10443816960</span> bytes <span style="color:#ff7b72;font-weight:bold">(</span><span style="color:#a5d6ff">10</span> GB, 9.7 GiB<span style="color:#ff7b72;font-weight:bold">)</span> copied, <span style="color:#a5d6ff">105</span> s, 99.4 MB/s
+</span></span><span style="display:flex;"><span>2510+1 records in
+</span></span><span style="display:flex;"><span>2510+1 records out
+</span></span><span style="display:flex;"><span><span style="color:#a5d6ff">10528882688</span> bytes <span style="color:#ff7b72;font-weight:bold">(</span><span style="color:#a5d6ff">11</span> GB, 9.8 GiB<span style="color:#ff7b72;font-weight:bold">)</span> copied, 105.767 s, 99.5 MB/s
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">[</span>root@localhost /<span style="color:#ff7b72;font-weight:bold">]</span><span style="color:#8b949e;font-style:italic"># mkdir /repo</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">[</span>root@localhost /<span style="color:#ff7b72;font-weight:bold">]</span><span style="color:#8b949e;font-style:italic"># echo &#34;/rhel9.iso /repo iso9660 defaults 0 0&#34; &gt;&gt; /etc/fstab</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">[</span>root@localhost /<span style="color:#ff7b72;font-weight:bold">]</span><span style="color:#8b949e;font-style:italic"># mount -a</span>
+</span></span></code></pre></div><h4 id="adding-repositories">
+  Adding Repositories
+  <a class="heading-link" href="#adding-repositories">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ul>
+<li>Slide 60</li>
+<li>This is critical to the exam.</li>
+<li>GPG checks are not needed for the course. Make sure <code>gpgcheck=0</code> in the repo.</li>
+</ul>
+<h5 id="commands-1">
+  Commands
+  <a class="heading-link" href="#commands-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#commands</span>
+</span></span><span style="display:flex;"><span>dnf config-manager --add-repo<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;file:///repo/AppStream&#34;</span>  
+</span></span><span style="display:flex;"><span>cat &gt;&gt; /etc/yum.repos.d/AppStream.repo <span style="color:#a5d6ff">&lt;&lt;EOF  
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff">&gt; [AppStream]  
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff">&gt; name=AppStream  
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff">&gt; baseurl=file:///repo/AppStream  
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff">&gt; gpgcheck=0  
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff">EOF</span>
+</span></span></code></pre></div><h5 id="output-4">
+  Output
+  <a class="heading-link" href="#output-4">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#output</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">[</span>root@localhost /<span style="color:#ff7b72;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>dnf repolist
+</span></span><span style="display:flex;"><span>Updating Subscription Management repositories.
+</span></span><span style="display:flex;"><span>Unable to read consumer identity
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>This system is not registered with an entitlement server. You can use subscription-manager to register.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Warning: failed loading <span style="color:#a5d6ff">&#39;/etc/yum.repos.d/AppStream.repo&#39;</span>, skipping.
+</span></span><span style="display:flex;"><span>repo id                                repo name
+</span></span><span style="display:flex;"><span>repo_AppStream                         created by dnf config-manager from file:///repo/AppStream
+</span></span></code></pre></div><h4 id="labs">
+  Labs
+  <a class="heading-link" href="#labs">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>Ensure your system is using a repository for base packages as well as application streams
+##### Output</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#output</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">[</span>root@localhost /<span style="color:#ff7b72;font-weight:bold">]</span><span style="color:#8b949e;font-style:italic"># dnf repolist</span>
+</span></span><span style="display:flex;"><span>Updating Subscription Management repositories.
+</span></span><span style="display:flex;"><span>Unable to read consumer identity
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>This system is not registered with an entitlement server. You can use subscription-manager to register.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Warning: failed loading <span style="color:#a5d6ff">&#39;/etc/yum.repos.d/AppStream.repo&#39;</span>, skipping.
+</span></span><span style="display:flex;"><span>repo id                                repo name
+</span></span><span style="display:flex;"><span>repo_AppStream                         created by dnf config-manager from file:///repo/AppStream
+</span></span></code></pre></div><p>Find the package that contains the seinfo program file and install it
+##### Output</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#output</span>
+</span></span></code></pre></div><p>Download the httpd package from the repositories without installing it, and query to see if there are any scripts in it
+##### Output</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#output</span>
+</span></span></code></pre></div><h3 id="su-and-sudo">
+  su and sudo
+  <a class="heading-link" href="#su-and-sudo">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Slide 12</li>
+<li>To add somebody to sudo group <code>usermod -aG wheel myuser</code></li>
+<li>Never enable `%wheel ALL=(ALL) NOPASSWD:ALL</li>
+<li>You can modify token expiration by editing the `timestamp_type=global,timestamp_timeout=60&quot;</li>
+<li>Drop files can be added to a user to limit access, <code>lisa ALL=/sbin/useradd, /usr/bin/passwd</code></li>
+<li>This can lock a user down a bit. This is worth exploring with ansible to permit temporary permissions.
+#### Commands</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#commands</span>
+</span></span><span style="display:flex;"><span>useradd lisa
+</span></span><span style="display:flex;"><span>useradd linda
+</span></span><span style="display:flex;"><span>passwd linda <span style="color:#8b949e;font-style:italic"># set password</span>
+</span></span><span style="display:flex;"><span>su - linda
+</span></span><span style="display:flex;"><span>id <span style="color:#8b949e;font-style:italic"># get groups of the member</span>
+</span></span><span style="display:flex;"><span>sudo ls -l /root
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># from root type systemctl ...</span>
+</span></span><span style="display:flex;"><span>visudo
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># add linda as an example</span>
+</span></span><span style="display:flex;"><span>linda <span style="color:#79c0ff">ALL</span><span style="color:#ff7b72;font-weight:bold">=</span>/usr/bin/passwd, ! /usr/bin/passwd root <span style="color:#8b949e;font-style:italic"># this is not good, must have an exclution list to prevent Linda from resetting root</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Now linda can reset all passwords except root and she will be denied</span>
+</span></span></code></pre></div><h3 id="users-and-groups">
+  Users and Groups
+  <a class="heading-link" href="#users-and-groups">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Processes use system accounts</p>
+<ul>
+<li>People use regular user accounts</li>
+<li>When you create new user the home directory comes from <code>/etc/skel</code></li>
+<li>To lock an account <code>usernmod -L &lt;user&gt;</code> and <code>usermod -U &lt;user&gt;</code> to unblock</li>
+<li>To expire an account <code>usernmode -e 2032-01-01 &lt;user&gt;</code></li>
+<li>If you mod an account to use <code>/sbin/nologin</code> then the user cannot login. Useful for [system accounts](system accounts &ldquo;wikilink&rdquo;)</li>
+<li><code>usermod -s /sbin/nologin myapp</code>
+##### Commands</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#commands</span>
+</span></span><span style="display:flex;"><span>useradd <span style="color:#8b949e;font-style:italic"># create users</span>
+</span></span><span style="display:flex;"><span>usermod <span style="color:#8b949e;font-style:italic"># modify users</span>
+</span></span><span style="display:flex;"><span>userdel <span style="color:#8b949e;font-style:italic"># delete users</span>
+</span></span><span style="display:flex;"><span>passwd <span style="color:#8b949e;font-style:italic"># set passwords</span>
+</span></span><span style="display:flex;"><span>groupadd
+</span></span><span style="display:flex;"><span>groupdel
+</span></span><span style="display:flex;"><span>lid -g groupName <span style="color:#8b949e;font-style:italic"># list all users that are a member of groupName</span>
+</span></span></code></pre></div><h4 id="lab-manage-users-and-groups">
+  Lab: Manage Users and Groups
+  <a class="heading-link" href="#lab-manage-users-and-groups">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ul>
+<li>Slide 25</li>
+</ul>
+<h3 id="file-ownership">
+  File Ownership
+  <a class="heading-link" href="#file-ownership">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h5 id="commands-2">
+  Commands
+  <a class="heading-link" href="#commands-2">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#commands</span>
+</span></span><span style="display:flex;"><span>chown user<span style="color:#ff7b72;font-weight:bold">[</span>:group<span style="color:#ff7b72;font-weight:bold">]</span> file to set user-ownership
+</span></span><span style="display:flex;"><span>chgrp &lt;group&gt; file to set group-ownership
+</span></span></code></pre></div><h4 id="manage-permissions">
+  Manage Permissions
+  <a class="heading-link" href="#manage-permissions">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>On files</th>
+<th>On directories</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Read (4)</td>
+<td>Open the file</td>
+<td>List files and subdirectories</td>
+</tr>
+<tr>
+<td>Write (2)</td>
+<td>Modify the file</td>
+<td>Create/Delete files and subdirectories</td>
+</tr>
+<tr>
+<td>Execute (1)</td>
+<td>Run the file</td>
+<td>Use cd to activate the directory</td>
+</tr>
+</tbody>
+</table>
+<h5 id="commands-3">
+  Commands
+  <a class="heading-link" href="#commands-3">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<pre><code>chmod
+chmod 750 myfile
+chmod +x myscript
+</code></pre>
+<h5 id="special-x-considerations">
+  Special X considerations
+  <a class="heading-link" href="#special-x-considerations">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<ul>
+<li>When <code>x</code> is applied recusively, it would amke all directories and well as files executable</li>
+<li>Only useful if applying executable in a recruisive way</li>
+</ul>
+<h4 id="demo">
+  Demo
+  <a class="heading-link" href="#demo">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p /data/profs /data/students
+</span></span><span style="display:flex;"><span>chmown :profs /data/profs
+</span></span><span style="display:flex;"><span>chgroup students /data/students
+</span></span><span style="display:flex;"><span>chmod <span style="color:#a5d6ff">770</span> /data/students
+</span></span><span style="display:flex;"><span>chmod g+w,o-rx /data/profs
+</span></span></code></pre></div><h4 id="shared-group-directories">
+  Shared Group Directories
+  <a class="heading-link" href="#shared-group-directories">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ul>
+<li>When members of a single group need to share files in a directory</li>
+<li>Use a Set group ID (SGID) permission ensures that all files in the shared group directory and group owned by the owner of the directory</li>
+<li>A sticky bit permission makes sure that only the user who is owner, or directory, is allowed to delete it
+##### Shared Group Directories steps</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod g+s mydir  <span style="color:#8b949e;font-style:italic"># applies SGID</span>
+</span></span><span style="display:flex;"><span>chmod +t mydir   <span style="color:#8b949e;font-style:italic"># assigns sticky bit</span>
+</span></span><span style="display:flex;"><span>chmod <span style="color:#a5d6ff">3770</span> mydir <span style="color:#8b949e;font-style:italic"># assigns the SGIDD and sticky bit and +rwx for bot user and group</span>
+</span></span></code></pre></div><h5 id="sgid-demo">
+  SGID demo
+  <a class="heading-link" href="#sgid-demo">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<pre><code>This is in a demo on slide 35.
+</code></pre>
+<h3 id="partitions">
+  Partitions
+  <a class="heading-link" href="#partitions">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h2 id="tasks">
+  Tasks
+  <a class="heading-link" href="#tasks">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>☐ Review repositories lab</li>
+<li>☐ Users and groups labs</li>
+<li>☐ Review permissions and understand both 777 and g+w methods
+## ❓ Questions</li>
+<li>☐ For managing repositories, for AppStream, why does this mount to the DVD repo I built in the previous lab?</li>
+<li>[ ]</li>
+</ul>
+<h2 id="-related-links">
+  🔗 Related links
+  <a class="heading-link" href="#-related-links">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><strong>Recommended Preparation</strong>:</p>
+<ul>
+<li>Watch: <a href="https://learning.oreilly.com/videos/linux-fundamentals-2nd/9780137929313/"  class="external-link" target="_blank" rel="noopener"><em>Linux Fundamentals, 2nd Edition</em></a> by Sander van Vugt</li>
+<li>Attend: <a href="https://learning.oreilly.com/search/?q=Linux%20Fundamentals%20Bootcamp%20Sander%20van%20Vugt&amp;type=live-event-series&amp;publishers=Pearson"  class="external-link" target="_blank" rel="noopener"><em>Linux Fundamentals Bootcamp</em></a> by Sander van Vugt</li>
+<li>Watch: <a href="https://learning.oreilly.com/videos/red-hat-certified/9780137931521/"  class="external-link" target="_blank" rel="noopener"><em>Red Hat Certified System Administrator (RHCSA) RHEL 9</em></a> by Sander van Vugt</li>
+</ul>
+<p><strong>Recommended Follow-up</strong>:</p>
+<ul>
+<li>Read: <a href="https://learning.oreilly.com/library/view/red-hat-rhcsa/9780138096311/"  class="external-link" target="_blank" rel="noopener"><em>Red Hat RHCSA 9 Cert Guide: EX200</em></a> by Sander van Vugt:</li>
+<li>Watch: <a href="https://learning.oreilly.com/videos/bash-shell-scripting/9780137689064/"  class="external-link" target="_blank" rel="noopener"><em>Bash Shell Scripting, 2nd Edition</em></a> by Sander van Vugt</li>
+<li>Attend: <a href="https://learning.oreilly.com/search/?q=sander%20van%20vugt%20linux%20security%20from%20basics%20to%20guru&amp;type=live-event-series&amp;publishers=Pearson"  class="external-link" target="_blank" rel="noopener">Linux Security from Basics to Guru</a> by Sander van Vugt</li>
+<li>Attend: <a href="https://learning.oreilly.com/search/?q=Mastering%20Systemd%20Sander%20van%20Vugt&amp;type=live-event-series&amp;publishers=Pearson"  class="external-link" target="_blank" rel="noopener"><em>Mastering Systemd</em></a> by Sander van Vugt</li>
+<li>Attend: <a href="https://learning.oreilly.com/search/?q=Linux%20Troubleshooting%20Sander%20van%20Vugt&amp;type=live-event-series&amp;publishers=Pearson"  class="external-link" target="_blank" rel="noopener"><em>Linux Troubleshooting</em></a> by Sander van Vugt</li>
+<li><a href="https://learning.oreilly.com/playlists/5eb6cb3b-1f3c-4b67-a3d4-c9a3d4aaaab9/"  class="external-link" target="_blank" rel="noopener">Red Hat Certified Systems Administrator (RHCSA) Labs</a></li>
+<li><a href="https://learning.oreilly.com/playlists/b12ad4cc-6ad2-48ba-aecb-00a8158f6255/"  class="external-link" target="_blank" rel="noopener">Red Hat Certified Systems Administrator (RHCSA) Challenge Labs</a></li>
+<li></li>
+</ul>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2024
+     Curtis Bunch 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
